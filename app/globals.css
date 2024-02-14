@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,25 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+.navButton {
+  border: 1px solid #66fcf1;
+  border-radius: 0px;
+  background: linear-gradient(to right, #66fcf1 50%, #0b0c10 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.1s ease-out;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.contactInfo {
+  @apply flex-auto min-w-[140px] outline-none bg-darkturkish/30 rounded-sm border-b px-1 py-3 border-darkturkish/20 text-themegray placeholder-themegray transition-all focus:border-themepink/70 focus:text-themepink hover:border-themepink/70;
+}
+
+body {
+  background: #0b0c10;
 }
