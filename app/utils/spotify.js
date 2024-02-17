@@ -5,6 +5,7 @@ const scopes = [
   "user-read-currently-playing",
   "user-modify-playback-state",
   "user-follow-read",
+  "user-library-read",
 ].join(",");
 
 const params = {
