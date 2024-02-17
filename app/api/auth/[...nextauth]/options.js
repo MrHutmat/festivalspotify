@@ -75,26 +75,46 @@ export const options = {
   pagees: {
     signIn: "/login",
   },
-  callbacks: {
-    async jwt({ token, account, user }) {
-      //initial sign in
-      if (account && user) {
-        return {
-          ...token,
-          accessToken: account.accessToken,
-          refreshToken: account.refreshToken,
-          username: account.providerAccountId,
-          accessTokenExpires: account.expires_at * 1000, //convert to ms
-        };
-      }
+  // callbacks: {
+  //   async jwt({ token, account, user }) {
+  //     //initial sign in
+  //     if (account && user) {
+  //       return {
+  //         ...token,
+  //         accessToken: account.accessToken,
+  //         refreshToken: account.refreshToken,
+  //         username: account.providerAccountId,
+  //         accessTokenExpires: account.expires_at * 1000, //convert to ms
+  //       };
+  //     }
 
-      // Return previous token if the access token has not expired yet
+  //     // Return previous token if the access token has not expired yet
+  //     if (Date.now() < token.accessTokenExpires) {
+  //       return token;
+  //     }
+
+  //     // Access token has expired, try to update it
+  //     return await refreshAccessToken(token);
+  //   },
+  // },
+
+  callbacks: {
+    async jwt({ token, account, profile, user }) {
+      // Persist the OAuth access_token and or the user id to the token right after signin
+      if (account && user) {
+        token.accessToken = account.access_token;
+        token.id = profile.id;
+        token.accessTokenExpires = account.expires_at * 1000;
+      }
       if (Date.now() < token.accessTokenExpires) {
         return token;
       }
-
-      // Access token has expired, try to update it
       return await refreshAccessToken(token);
+    },
+    async session({ session, token, user }) {
+      // Send properties to the client, like an access_token from a provider.
+      session.accessToken = token.accessToken;
+      return session;
     },
   },
 };
