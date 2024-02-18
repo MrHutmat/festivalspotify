@@ -2,11 +2,14 @@
 
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
+import GetAllSongsArtists from "../Components/GetAllSongsArtists";
+import Hero from "../Components/Hero";
 
 const ArtistChecker = () => {
   const { data: session } = useSession();
-  const [artists, setArtists] = useState([]);
-  const [isDataFetched, setIsDataFetched] = useState(false);
+  // const [artists, setArtists] = useState([]);
+  //const [isDataFetched, setIsDataFetched] = useState(false);
+  const [showComponentTwo, setShowComponentTwo] = useState(false);
 
   // useEffect(() => {
   //   if (session?.error === "RefreshAccessTokenError") {
@@ -26,42 +29,42 @@ const ArtistChecker = () => {
 
   //   const songs = await response.json();
   //   const artistNames = songs.artists.items.map((artist) => artist.name);
-  useEffect(() => {
-    async function getArtists() {
-      if (session && session.accessToken && !isDataFetched) {
-        let allArtists = [];
-        let nextUrl = "https://api.spotify.com/v1/me/tracks?limit=50&offset=0"; // Replace with your initial URL
+  // useEffect(() => {
+  //   async function getArtists() {
+  //     if (session && session.accessToken && !isDataFetched) {
+  //       let allArtists = [];
+  //       let nextUrl = "https://api.spotify.com/v1/me/tracks?limit=50&offset=0"; // Replace with your initial URL
 
-        // Continue fetching tracks until there are no more
-        while (nextUrl) {
-          // Fetch tracks data
-          const response = await fetch(nextUrl, {
-            headers: {
-              Authorization: `Bearer ${session.accessToken}`,
-            },
-          });
-          const data = await response.json(); // Assuming the response is JSON
+  //       // Continue fetching tracks until there are no more
+  //       while (nextUrl) {
+  //         // Fetch tracks data
+  //         const response = await fetch(nextUrl, {
+  //           headers: {
+  //             Authorization: `Bearer ${session.accessToken}`,
+  //           },
+  //         });
+  //         const data = await response.json(); // Assuming the response is JSON
 
-          // Extract artists from the current batch of tracks
-          const names = data.items.flatMap((artist) =>
-            artist.track.artists.map((artist) => artist.name)
-          );
+  //         // Extract artists from the current batch of tracks
+  //         const names = data.items.flatMap((artist) =>
+  //           artist.track.artists.map((artist) => artist.name)
+  //         );
 
-          // Add unique artists to the list
-          allArtists = [...new Set([...allArtists, ...names])];
+  //         // Add unique artists to the list
+  //         allArtists = [...new Set([...allArtists, ...names])];
 
-          // Update nextUrl for pagination
-          nextUrl = data.next;
-        }
-        console.log(allArtists);
+  //         // Update nextUrl for pagination
+  //         nextUrl = data.next;
+  //       }
+  //       console.log(allArtists);
 
-        setArtists(allArtists);
-        setIsDataFetched(true);
-      }
-    }
+  //       setArtists(allArtists);
+  //       setIsDataFetched(true);
+  //     }
+  //   }
 
-    getArtists();
-  }, [session, isDataFetched]);
+  //   getArtists();
+  // }, [session, isDataFetched]);
 
   // useEffect(() => {
   //   async function getArtists() {
@@ -120,22 +123,21 @@ const ArtistChecker = () => {
   //   getArtists();
   // }, [session]);
 
+  const handleClick = () => {
+    setShowComponentTwo(true);
+  };
+
   return (
     <div className="text-white">
       <h1>Find kunstner</h1>
       <p>Her kan du finde en kunstner</p>
-      {/* <button onClick={getArtists}>Tryk her</button> */}
 
       <p>{JSON.stringify(session)}</p>
-      <p>{artists[201]}</p>
-
-      {/* <div>
-        {artists.map((artist) => (
-          <div key={artist.id}>
-            <h2>{artist.name}</h2>
-          </div>
-        ))}
-      </div> */}
+      <div>
+        <h1>Conditional Rendering Example</h1>
+        <button onClick={handleClick}>Show Component Two</button>
+        {showComponentTwo ? <GetAllSongsArtists session={session} /> : <Hero />}
+      </div>
     </div>
   );
 };
