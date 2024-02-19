@@ -7,8 +7,10 @@ import Hero from "../Components/Hero";
 
 const ArtistChecker = () => {
   const { data: session } = useSession();
-  // const [artists, setArtists] = useState([]);
-  //const [isDataFetched, setIsDataFetched] = useState(false);
+  const [artists, setArtists] = useState([]);
+  const [tracks, setTracks] = useState([]);
+
+  const [isDataFetched, setIsDataFetched] = useState(false);
   const [showComponentTwo, setShowComponentTwo] = useState(false);
 
   // useEffect(() => {
@@ -29,42 +31,46 @@ const ArtistChecker = () => {
 
   //   const songs = await response.json();
   //   const artistNames = songs.artists.items.map((artist) => artist.name);
-  // useEffect(() => {
-  //   async function getArtists() {
-  //     if (session && session.accessToken && !isDataFetched) {
-  //       let allArtists = [];
-  //       let nextUrl = "https://api.spotify.com/v1/me/tracks?limit=50&offset=0"; // Replace with your initial URL
+  useEffect(() => {
+    async function getArtists() {
+      if (session && session.accessToken && !isDataFetched) {
+        let allArtists = [];
+        let allTracks = [];
+        let nextUrl = "https://api.spotify.com/v1/me/tracks?limit=50&offset=0"; // Replace with your initial URL
 
-  //       // Continue fetching tracks until there are no more
-  //       while (nextUrl) {
-  //         // Fetch tracks data
-  //         const response = await fetch(nextUrl, {
-  //           headers: {
-  //             Authorization: `Bearer ${session.accessToken}`,
-  //           },
-  //         });
-  //         const data = await response.json(); // Assuming the response is JSON
+        // Continue fetching tracks until there are no more
+        while (nextUrl) {
+          // Fetch tracks data
+          const response = await fetch(nextUrl, {
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`,
+            },
+          });
+          const data = await response.json(); // Assuming the response is JSON
 
-  //         // Extract artists from the current batch of tracks
-  //         const names = data.items.flatMap((artist) =>
-  //           artist.track.artists.map((artist) => artist.name)
-  //         );
+          allTracks.push(data.items);
 
-  //         // Add unique artists to the list
-  //         allArtists = [...new Set([...allArtists, ...names])];
+          // Extract artists from the current batch of tracks
+          const names = data.items.flatMap((artist) =>
+            artist.track.artists.map((artist) => artist.name)
+          );
 
-  //         // Update nextUrl for pagination
-  //         nextUrl = data.next;
-  //       }
-  //       console.log(allArtists);
+          // Add unique artists to the list
+          allArtists = [...new Set([...allArtists, ...names])];
 
-  //       setArtists(allArtists);
-  //       setIsDataFetched(true);
-  //     }
-  //   }
+          // Update nextUrl for pagination
+          nextUrl = data.next;
+        }
+        console.log(allArtists);
 
-  //   getArtists();
-  // }, [session, isDataFetched]);
+        setArtists(allArtists);
+        setTracks(allTracks);
+        setIsDataFetched(true);
+      }
+    }
+
+    getArtists();
+  }, [session, isDataFetched]);
 
   // useEffect(() => {
   //   async function getArtists() {
