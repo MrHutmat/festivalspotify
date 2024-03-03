@@ -1,13 +1,11 @@
-import navigationLinks from "@/app/utils/navigationLinks";
 import Link from "next/link";
 import Socials from "./Socials";
 
 const MobileNav = ({ isActiv, onClick }) => {
-  const navLinks = navigationLinks;
 
   return (
     <>
-      {isActiv && (
+      {/* {isActiv && (
         <div className="isolate grow bg-themeblack md:hidden">
           <div className="z-50 block w-full pb-8">
             <nav
@@ -39,7 +37,7 @@ const MobileNav = ({ isActiv, onClick }) => {
             </nav>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };

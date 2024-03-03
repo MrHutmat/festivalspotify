@@ -3,6 +3,8 @@ import React from "react";
 const GetAllSongsArtists = async ({ session }) => {
   const dummyList = ["Linkin Park", "Eminem", "Drake", "Kanye West"];
 
+  console.log(session);
+
   if (session && session.accessToken) {
     let allArtists = [];
     let nextUrl = "https://api.spotify.com/v1/me/tracks?limit=50&offset=0";
@@ -50,10 +52,10 @@ const GetAllSongsArtists = async ({ session }) => {
     return commonElements;
   };
 
-  if (allArtists !== null) {
-    let commonElementsList = findCommonElements(bigList1, bigList2);
-    console.log(commonElementsList);
-  }
+  // if (allArtists !== null) {
+  //   let commonElementsList = findCommonElements(bigList1, bigList2);
+  //   console.log(commonElementsList);
+  // }
 
   return (
     <div>

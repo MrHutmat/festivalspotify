@@ -1,13 +1,30 @@
 "use client";
 
 import React from "react";
-import { signIn } from "next-auth/react";
+import Image from "next/image";
+import Link from "next/link";
+import { signIn, useSession, signOut } from "next-auth/react";
 
-const Login = () => {
+export const Login = () => {
+  const { data: session, status } = useSession();
+  //console.log(status);
+
+  if (status === "authenticated") {
+    return (
+      <Link href={`/findkunstner`}>
+        <img src={session.user?.image} alt="" />
+      {/* <Image
+      width={32}
+      height={32}
+      src={session.user.image}
+      alt="Profile Picture"
+      /> */}
+      </Link>
+    )
+
+  }
+
   return (
-    <div className="bg-red-600">
-      <h1>Login</h1>
-      <div>
         <button
           onClick={() =>
             signIn("spotify", {
@@ -17,9 +34,11 @@ const Login = () => {
         >
           Login in
         </button>
-      </div>
-    </div>
   );
 };
 
-export default Login;
+
+
+export const LogOut = () => {
+  return <button onClick={() => signOut()}>Log out</button>;
+}

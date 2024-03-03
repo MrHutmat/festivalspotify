@@ -4,8 +4,12 @@ import React from "react";
 import Image from "next/image";
 import { AiOutlineFile } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { useSession } from "next-auth/react";
 
 const Hero = () => {
+    const { data: session } = useSession();
+    console.log("From Hero comp: " + session);
+
   return (
     <div className="z-10 col-start-1 row-start-1 grid h-screen place-items-center overflow-x-hidden">
       <div className="flex max-w-7xl flex-col items-center justify-center gap-10 px-5 lg:flex-row-reverse">
@@ -49,10 +53,7 @@ const Hero = () => {
             Mit navn er <a className="text-turkish">Mathias.</a>
           </h1>
           <p className="py-6">
-            Jeg pt datamatikker studerende på UCL i Odense. Det her er mit
-            personlige portfølje, jeg har lavet i anledning af mit 4. semester.
-            Her kan du finde nogle af de forskellige ting jeg har arbejdet med
-            inde for frontend, og app udvikling.
+            {JSON.stringify(session)}
           </p>
           <button className="inline-flex items-center rounded bg-turkish px-4 py-2 font-bold text-themelight hover:bg-darkturkish">
             <AiOutlineFile size={25} className="mr-2" />

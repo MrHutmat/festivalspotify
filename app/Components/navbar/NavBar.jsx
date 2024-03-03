@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+
 import Logo from "./Logo";
 import Socials from "./Socials";
 import NavItems from "./NavItems";
@@ -9,6 +10,8 @@ import { useState, useEffect } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
+import { LogOut, Login } from "../Login";
+import AuthCheck from "../AuthCheck";
 //import { useWindowDimension } from "@/Hooks/useWindowDimension";
 
 {
@@ -21,59 +24,12 @@ import Link from "next/link";
 }
 
 const NavBar = () => {
-  const [dimension, setDimension] = useState(global.innerWidth);
-
   const [isOpen, setIsOpen] = useState(false);
-
-  const [hasScrolled, setHasScrolled] = useState(false);
-
-  useEffect(() => {
-    const changeNavBar = () => {
-      window.scrollY > 0 ? setHasScrolled(true) : setHasScrolled(false);
-    };
-
-    window.addEventListener("scroll", changeNavBar);
-    return () => {
-      window.removeEventListener("scroll", changeNavBar);
-    };
-  }, [hasScrolled]);
-
-  useEffect(() => {
-    const debouncedResizeHandler = debounce(() => {
-      console.log("***** debounced resize"); // See the cool difference in console
-      setDimension(global.innerWidth);
-    }, 100); // 100ms
-
-    if (dimension > 770) {
-      setIsOpen(false);
-    }
-
-    window.addEventListener("resize", debouncedResizeHandler);
-    return () => {
-      global.removeEventListener("resize", debouncedResizeHandler);
-    };
-  }, [isOpen, dimension]); // Note this empty array. this effect should run only on mount and unmount
-
-  // const changeState = () => {
-  //   width >= 768 ? setIsOpen(true) : setHasScrolled(false);
-  // }
-
-  // console.log(hasScrolled);
-  // console.log(isOpen);
-  // console.log(dimension);
-
-  // if (width >= 768) {
-  //   return setIsOpen(false);
-  // }
 
   return (
     <div className={`sticky top-0 ${isOpen ? "z-20" : "z-50"}`}>
       <nav
-        className={`z-50 bg-themeblack bg-opacity-95 px-2 py-5 backdrop-blur-lg backdrop-saturate-200 backdrop-filter transition-shadow duration-500 md:items-center ${
-          isOpen || hasScrolled
-            ? "shadow-[0_16px_32px_-16px_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.1)]"
-            : ""
-        }`}
+        className={`z-50 bg-themeblack bg-opacity-95 px-2 py-5 backdrop-blur-lg backdrop-saturate-200 backdrop-filter transition-shadow duration-500 md:items-center`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <motion.div
@@ -101,8 +57,12 @@ const NavBar = () => {
 
               <p className="pl-1 pr-3 text-lg font-bold text-themegray">MENU</p>
             </div>
-
-            <NavItems onClick={() => setIsOpen(false)} />
+            <div className="text-themegray flex">
+              <Login />
+              <AuthCheck>
+                <LogOut />
+              </AuthCheck>
+            </div>
           </motion.div>
 
           <motion.div
@@ -160,16 +120,5 @@ const NavBar = () => {
     </div>
   );
 };
-
-function debounce(fn, ms) {
-  let timer;
-  return (_) => {
-    clearTimeout(timer);
-    timer = setTimeout((_) => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}
 
 export default NavBar;

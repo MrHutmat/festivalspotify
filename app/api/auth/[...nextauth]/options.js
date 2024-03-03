@@ -72,9 +72,8 @@ export const options = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
-  pagees: {
-    signIn: "/login",
-  },
+
+  
   // callbacks: {
   //   async jwt({ token, account, user }) {
   //     //initial sign in
@@ -114,8 +113,8 @@ export const options = {
     async session({ session, token, user }) {
       // Send properties to the client, like an access_token from a provider.
       session.accessToken = token.accessToken;
-      console.log("the session ", session);
-      console.log("the token ", token);
+      //console.log("the session ", session);
+      //console.log("the token ", token);
       return session;
     },
   },
