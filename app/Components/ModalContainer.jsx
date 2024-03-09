@@ -1,3 +1,5 @@
+"use client";
+
 const ModalContainer = ({ isOpen, closeModal, children }) => {
   if (!isOpen) return null;
 

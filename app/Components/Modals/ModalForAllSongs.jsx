@@ -5,12 +5,28 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const ModalForAllSongs = () => {
-  const [data, setData] = useState("");
+  const [selectedOption, setSelectedOption] = useState("option1");
 
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+    console.log(selectedOption);
   };
+
+  const handleButtonClick = () => {
+    // Define bands based on the selected radio option
+    let bands;
+    if (selectedOption === "option1") {
+      bands = ["Band A", "Band B", "Band C"];
+    } else if (selectedOption === "option2") {
+      bands = ["Band X", "Band Y", "Band Z"];
+    } else {
+      bands = ["Band P", "Band Q", "Band R"];
+    }
+    // Call the function passed from props with the selected bands
+    onSelection(bands);
+    onClose();
+  };
+
   return (
     <div className="">
       <div className="">
@@ -26,32 +42,32 @@ const ModalForAllSongs = () => {
       >
         <div className="flex-1">
           <div className="flex flex-col">
-            <label htmlFor="roskilde">
+            <label>
               <input
-                {...register("Festival Selector")}
                 type="radio"
                 value="Roskilde"
-                id="roskilde"
+                checked={selectedOption === "option1"}
+                onChange={handleOptionChange}
               />
               Roskilde
             </label>
 
-            <label htmlFor="test">
+            <label>
               <input
-                {...register("Festival Selector")}
                 type="radio"
-                value="Test"
-                id="test"
+                value="Roskilde"
+                checked={selectedOption === "option2"}
+                onChange={handleOptionChange}
               />
               Test
             </label>
 
-            <label htmlFor="othertest">
+            <label>
               <input
-                {...register("Festival Selector")}
                 type="radio"
-                value="OtherTest"
-                id="othertest"
+                value="Roskilde"
+                checked={selectedOption === "option3"}
+                onChange={handleOptionChange}
               />
               OtherTest
             </label>
@@ -59,7 +75,7 @@ const ModalForAllSongs = () => {
         </div>
         <div className="mx-10 hidden h-[300px] min-h-[1em] w-0.5 self-stretch bg-themegray opacity-10 xl:inline-block"></div>
         <div className="flex-1 text-center">
-          <input type="Submit" />
+          <button onClick={handleButtonClick}>Submit</button>
         </div>
       </form>
     </div>

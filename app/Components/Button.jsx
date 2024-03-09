@@ -26,6 +26,20 @@ const Button = ({ modalContent, buttonText }) => {
   //   </div>
   // );
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("option1");
+  const { data: session } = useSession();
+  const [commonArtist, setCommonArtist] = useState([]);
+
+  console.log(session);
+
+  const handleButtonClick = async () => {
+    const response = await allSavedSongs(session);
+    //await allSavedSongs(session);
+    console.log(response);
+    setCommonArtist(response);
+    console.log(commonArtist);
+    console.log(response);
+  };
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -33,6 +47,10 @@ const Button = ({ modalContent, buttonText }) => {
 
   const handleCloseModal = () => {
     setIsOpen(false);
+  };
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
   };
 
   return (
@@ -44,7 +62,7 @@ const Button = ({ modalContent, buttonText }) => {
         {buttonText}
       </button>
       <ModalContainer isOpen={isOpen} closeModal={handleCloseModal}>
-        {modalContent}
+        {modalContent(selectedOption, handleOptionChange, handleButtonClick)}
       </ModalContainer>
     </div>
   );
