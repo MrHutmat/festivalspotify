@@ -1,7 +1,7 @@
 "use client";
 
-import { allSavedSongs } from "@/app/utils/allSavedSongs";
-import { useSession } from "next-auth/react";
+//import { allSavedSongs } from "@/app/utils/allSavedSongs";
+//import { useSession } from "next-auth/react";
 import { useState } from "react";
 import ModalContainer from "./ModalContainer";
 
@@ -26,20 +26,20 @@ const Button = ({ modalContent, buttonText }) => {
   //   </div>
   // );
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("option1");
-  const { data: session } = useSession();
+ // const [selectedOption, setSelectedOption] = useState("option1");
+ // const { data: session } = useSession();
   const [commonArtist, setCommonArtist] = useState([]);
 
-  console.log(session);
+  //console.log(session);
 
-  const handleButtonClick = async () => {
-    const response = await allSavedSongs(session);
-    //await allSavedSongs(session);
-    console.log(response);
-    setCommonArtist(response);
-    console.log(commonArtist);
-    console.log(response);
-  };
+  // const handleButtonClick = async () => {
+  //   const response = await allSavedSongs(session);
+  //   //await allSavedSongs(session);
+  //   console.log(response);
+  //   setCommonArtist(response);
+  //   console.log(commonArtist);
+  //   console.log(response);
+  // };
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -49,9 +49,9 @@ const Button = ({ modalContent, buttonText }) => {
     setIsOpen(false);
   };
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+  // const handleOptionChange = (event) => {
+  //   setSelectedOption(event.target.value);
+  // };
 
   return (
     <div>
@@ -62,10 +62,12 @@ const Button = ({ modalContent, buttonText }) => {
         {buttonText}
       </button>
       <ModalContainer isOpen={isOpen} closeModal={handleCloseModal}>
-        {modalContent(selectedOption, handleOptionChange, handleButtonClick)}
+        {modalContent}
       </ModalContainer>
     </div>
   );
 };
 
 export default Button;
+
+//(selectedOption, handleOptionChange, handleButtonClick)
