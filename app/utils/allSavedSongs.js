@@ -21,7 +21,7 @@ export const allSavedSongs = async (session, bands) => {
     });
     const data = await response.json(); // Assuming the response is JSON
 
-    allTracks.push(data.items);
+    allTracks.push(...data.items);
 
     // Extract artists from the current batch of tracks
     const names = data.items.flatMap((artist) =>
@@ -52,6 +52,9 @@ export const allSavedSongs = async (session, bands) => {
 
     return commonElements;
   };
+  console.log(allTracks);
 
-  return findCommonElements(dummyList, allArtists);
+  const commonElements = findCommonElements(dummyList, allArtists);
+
+  return { commonElements, allTracks }
 };
