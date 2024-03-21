@@ -1,18 +1,19 @@
 import { getServerSession } from "next-auth";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
 import GetAllSongsArtists from "../Components/GetAllSongsArtists";
 import { allSavedSongs } from "../utils/allSavedSongs";
 import Button from "../Components/Button";
 import ModalForAllSongs from "../Components/Modals/ModalForAllSongs";
 import OldButtonTest from "../Components/OldButtonTest";
+import options from "../api/auth/[...nextauth]/options";
 
 const Dashboard = async () => {
-  const { data: session } = await getServerSession();
+  const session = await getServerSession(options);
 
-  //   if (!session) {
-  //     redirect('/api/auth/signin');
-  //   }
-  console.log(session);
+  if (!session) {
+    redirect("/api/auth/signin");
+  }
+  console.log(session + "session");
 
   return (
     <div className="text-white p-10 text-center">
