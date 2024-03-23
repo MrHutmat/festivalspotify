@@ -1,19 +1,17 @@
 "use react";
 
 import { PlayIcon } from "@heroicons/react/24/solid";
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { set } from "react-hook-form";
 import useSound from "use-sound";
 
 const Song = ({ track, sno }) => {
   const [hover, setHover] = useState(false);
 
-  const [soundUrl, setSoundUrl] = useState("");
-  const [play, { stop, isPlaying }] = useSound(soundUrl);
 
-  //  const [isPlaying, setIsPlaying] = useState(false);
-  // const [audioPlaying, setAudioPlaying] = useState(null);
-  //  const audioRef = useRef(null);
+   const [isPlaying, setIsPlaying] = useState(false);
+   const [audio] = useState(new Audio(song) || null);
+   //  const audioRef = useRef(null);
 
   const millisToMinutesAndSeconds = (millis) => {
     var minutes = Math.floor(millis / 60000);
@@ -22,6 +20,16 @@ const Song = ({ track, sno }) => {
       ? minutes + 1 + ":00"
       : minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
   };
+
+
+  const playSong = (song) => {
+    setIsPlaying(!isPlaying);
+  }
+
+
+  useEffect(() => {
+    isPlaying ? audio.play() : audio.pause();
+  }, [isPlaying]);
 
   // const playSong = () => {
   //   console.log("Playing song " + audioPlaying);
@@ -71,13 +79,8 @@ const Song = ({ track, sno }) => {
     >
       <div className="flex items-center space-x-4">
         {hover ? (
-          <PlayButton
-            activeBackgroundColor="var(--color-primary)"
-            idleBackgroundColor="var(--color-text)"
-            iconColor="var(--color-background)"
-            size={60}
-            play={play}
-            stop={stop}
+          <PlayIcon
+          onClick={(track.preview_url) => {playSong()}}
           />
         ) : (
           <p className="w-5">{sno + 1}</p>
