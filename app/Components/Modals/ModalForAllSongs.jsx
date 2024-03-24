@@ -1,11 +1,10 @@
 "use client";
 
-import { data } from "autoprefixer";
-import { set, useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { allSavedSongs } from "../../utils/allSavedSongs";
 import { useSession } from "next-auth/react";
 import Song from "../Song";
+import savedtracks from "../../utils/savedtracks.json";
 
 const ModalForAllSongs = () => {
   const { data: session } = useSession();
@@ -15,6 +14,13 @@ const ModalForAllSongs = () => {
   const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
   const [tracks, setTracks] = useState([]);
   const [showSongs, setShowSongs] = useState(false);
+  const [currentTrack, setCurrentTrack] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(new Audio());
+
+  //FOR TESTING
+  const hardCodedTracks = savedtracks.items;
+  const forWhenTesting = true;
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -62,6 +68,24 @@ const ModalForAllSongs = () => {
     setTracks(filteredObjects);
   };
 
+  const playTrack = (track) => {
+    if (currentTrack !== track) {
+      audioRef.current.pause();
+      audioRef.current.src = track.preview_url;
+      audioRef.current.play();
+      setCurrentTrack(track);
+      setIsPlaying(true); // Set isPlaying to true when a new track starts playing
+    } else {
+      if (audioRef.current.paused) {
+        audioRef.current.play();
+        setIsPlaying(true); // Set isPlaying to true when the same track resumes playing
+      } else {
+        audioRef.current.pause();
+        setIsPlaying(false); // Set isPlaying to false when the same track is paused
+      }
+    }
+  };
+
   return (
     <div className="max-h-[550px]">
       <div className="">
@@ -70,7 +94,7 @@ const ModalForAllSongs = () => {
           Her er mine 2 emner, som jeg har arbejdet med under 4. Semester på
         </p>
       </div>
-      {!hasBeenSubmitted && !showSongs && (
+      {!hasBeenSubmitted && !showSongs && !forWhenTesting && (
         <form
           onSubmit={handleSubmit}
           className="flex justify-between text-start items-center"
@@ -134,10 +158,20 @@ const ModalForAllSongs = () => {
 
       {loading && <p>Loading...</p>}
 
-      {showSongs && (
+      {/* Change when not testing */}
+      {forWhenTesting && (
         <div className="text-white px-8 flex flex-col space-y-1 pb-28 max-h-[450px] overflow-auto">
-          {tracks.map((track, i) => {
-            return <Song key={track.track.id} track={track.track} sno={i} />;
+          <div>test</div>
+          {hardCodedTracks.map((track, i) => {
+            return (
+              <Song
+                key={track.track.id}
+                track={track.track}
+                sno={i}
+                playTrack={playTrack}
+                isPlaying={currentTrack === track.track && isPlaying}
+              />
+            );
           })}
         </div>
       )}

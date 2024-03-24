@@ -1,17 +1,14 @@
 "use react";
 
-import { PlayIcon } from "@heroicons/react/24/solid";
-import React, { useState, useEffect } from "react";
-import { set } from "react-hook-form";
-import useSound from "use-sound";
+//import { PlayIcon } from "@heroicons/react/24/solid";
+import React, { useState } from "react";
 
-const Song = ({ track, sno }) => {
+const Song = ({ track, sno, playTrack, isPlaying }) => {
   const [hover, setHover] = useState(false);
 
-
-   const [isPlaying, setIsPlaying] = useState(false);
-   const [audio] = useState(new Audio(song) || null);
-   //  const audioRef = useRef(null);
+  const handlePlayPause = () => {
+    playTrack(track);
+  };
 
   const millisToMinutesAndSeconds = (millis) => {
     var minutes = Math.floor(millis / 60000);
@@ -21,56 +18,6 @@ const Song = ({ track, sno }) => {
       : minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
   };
 
-
-  const playSong = (song) => {
-    setIsPlaying(!isPlaying);
-  }
-
-
-  useEffect(() => {
-    isPlaying ? audio.play() : audio.pause();
-  }, [isPlaying]);
-
-  // const playSong = () => {
-  //   console.log("Playing song " + audioPlaying);
-  //   // If there is already an audio element playing
-  //   if (audioRef.current.src === audioPlaying) {
-  //     console.log(audioRef.current);
-
-  //     // If it's the same song, toggle play/pause
-  //     if (audioRef.current.src === track.preview_url) {
-  //       console.log("Same song");
-  //       if (isPlaying) {
-  //         audioRef.current.pause();
-  //       } else {
-  //         audioRef.current.play();
-  //       }
-  //       setIsPlaying(!isPlaying);
-  //       return;
-  //     }
-  //     // If it's a different song, stop the current audio
-  //     audioRef.current.pause();
-  //     audioRef.current.stop();
-  //   } else {
-  //     // Create a new audio element
-  //     // const audio = new Audio(track.preview_url);
-  //     // Set the new audio element to the reference
-  //     const audioFile = new Audio(track.preview_url);
-  //     audioRef.current = audioFile;
-  //     setAudioPlaying(audioFile.src);
-
-  //     // Start playing the new audio
-  //     audioRef.current.play();
-
-  //     // Set state to indicate that audio is playing
-  //     setIsPlaying(true);
-
-  //     // When the audio finishes, set state to indicate that audio has stopped playing
-  //     audioRef.current.onended = () => {
-  //       setIsPlaying(false);
-  //     };
-  //   }
-  // };
   return (
     <div
       onMouseEnter={() => setHover(true)}
@@ -79,9 +26,9 @@ const Song = ({ track, sno }) => {
     >
       <div className="flex items-center space-x-4">
         {hover ? (
-          <PlayIcon
-          onClick={(track.preview_url) => {playSong()}}
-          />
+          <button className="h-8 w-8 text-white" onClick={handlePlayPause}>
+            {isPlaying ? "Pause" : "Play"}
+          </button>
         ) : (
           <p className="w-5">{sno + 1}</p>
         )}
