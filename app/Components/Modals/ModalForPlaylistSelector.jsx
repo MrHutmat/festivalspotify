@@ -1,31 +1,73 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { allSavedSongs } from "../../utils/allSavedSongs";
+import { showAllPlaylists } from "../../utils/showAllPlaylists";
+
 import { useSession } from "next-auth/react";
 import Song from "../Song";
 import savedtracks from "../../utils/savedtracks.json";
 import { createPlaylistAndAddSongs } from "@/app/utils/createPlaylistAndAddSongs";
 
-const ModalForAllSongs = () => {
+const ModalForPlaylistSelector = () => {
   const { data: session } = useSession();
   const [selectedOption, setSelectedOption] = useState("option1");
   const [commonArtist, setCommonArtist] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
   const [tracks, setTracks] = useState([]);
   const [showSongs, setShowSongs] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio());
+  const [playlists, setPlaylists] = useState([]);
+  const [hover, setHover] = useState(false);
 
   //FOR TESTING
   //const hardCodedTracks = savedtracks.items;
-  //const forWhenTesting = true;
+  const forWhenTesting = true;
+
+  useEffect(() => {
+    console.log("1" + session);
+    const showAllPlaylists = async (session) => {
+      console.log("2" + session);
+      let nextUrl = "https://api.spotify.com/v1/me/playlists?limit=50&offset=0"; // Replace with your initial URL
+      let allPlaylists = [];
+
+      // Continue fetching tracks until there are no more
+      while (nextUrl) {
+        // Fetch tracks data
+        const response = await fetch(nextUrl, {
+          headers: {
+            Authorization: `Bearer ${session.accessToken}`,
+          },
+        });
+        const data = await response.json(); // Assuming the response is JSON
+
+        allPlaylists.push(...data.items);
+
+        // Update nextUrl for pagination
+        nextUrl = data.next;
+      }
+      console.log(allPlaylists[0].images[0].url);
+      setPlaylists(allPlaylists);
+      setLoading(false);
+    };
+    showAllPlaylists(session);
+  }, []);
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
+
+  //   const getAllPlaylists = async () => {
+  //     const response = await showAllPlaylists(session);
+  //     console.log(response);
+
+  //     setPlaylists(response);
+  //   };
+
+  // getAllPlaylists();
 
   const getCommonArtistList = async (bands) => {
     const response = await allSavedSongs(session, bands);
@@ -37,16 +79,16 @@ const ModalForAllSongs = () => {
   };
 
   const handleCreatePlaylistClick = async () => {
-    await createPlaylist(tracks);
+    await createPlaylist(hardCodedTracks);
   };
 
-  const createPlaylist = async (tracks) => {
-    const respone = await createPlaylistAndAddSongs(
-      session,
-      tracks,
-      selectedOption
-    );
-  };
+  //   const createPlaylist = async (tracks) => {
+  //     const respone = await createPlaylistAndAddSongs(
+  //       session,
+  //       tracks,
+  //       setSelectedOption
+  //     );
+  //   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -107,7 +149,59 @@ const ModalForAllSongs = () => {
           Her er mine 2 emner, som jeg har arbejdet med under 4. Semester på
         </p>
       </div>
-      {!hasBeenSubmitted && !showSongs && (
+      {!hasBeenSubmitted && !loading && !showSongs && forWhenTesting && (
+        <div className="px-8 flex flex-col space-y-1 pb-28 max-h-[450px] overflow-auto">
+          {playlists.map((playlist, i) => {
+            return (
+              <div
+                key={playlist.id}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                className="grid grid-cols-2 text-neutral-400 text-sm py-4 px-5 hover:bg-white hover:bg-opacity-10 rounded-lg cursor-default"
+              >
+                <div className="flex items-center space-x-4">
+                  <p className="w-5">{i + 1}</p>
+                  {/* <div className="h-4 w-4">{playlist.images[0].url}</div> */}
+
+                  {/* {playlist?.images[0]?.url && (
+                    <img className="h-4 w-4" src={playlist.images[0].url} />
+                  )} */}
+                  {/* <img className="h-4 w-4" src={playlists[i].images[0].url} /> */}
+
+                  {playlist.images && playlist.images.length > 0 ? (
+                    <img className="h-4 w-4" src={playlist.images[0].url} />
+                  ) : (
+                    <img
+                      className="h-4 w-4"
+                      src="https://i.scdn.co/image/ab67616d0000b273058d85d25752a6701564ba06"
+                    />
+                  )}
+
+                  <div>
+                    <p className="w-36 lg:w-64 truncate text-white text-base">
+                      {playlist.name}
+                    </p>
+                    <p className="w-36 truncate">
+                      <>
+                        <span className="hover:underline">
+                          {playlist.owner.display_name}
+                        </span>
+                      </>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between ml-auto md:ml-0">
+                  <p className="w-40 truncate hidden md:inline">
+                    PlaceHolder for now
+                  </p>
+                  <p>{playlist.tracks.total}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+      {!hasBeenSubmitted && !showSongs && !forWhenTesting && (
         <form
           onSubmit={handleSubmit}
           className="flex justify-between text-start items-center"
@@ -171,6 +265,7 @@ const ModalForAllSongs = () => {
 
       {loading && <p>Loading...</p>}
 
+      {/* Change when not testing */}
       {showSongs && (
         <div className="text-white px-8 flex flex-col space-y-1 pb-28 max-h-[450px] overflow-auto">
           <div>
@@ -182,7 +277,7 @@ const ModalForAllSongs = () => {
               Click Here
             </button>
           </div>
-          {tracks.map((track, i) => {
+          {track.map((track, i) => {
             return (
               <Song
                 key={track.track.id}
@@ -199,4 +294,4 @@ const ModalForAllSongs = () => {
   );
 };
 
-export default ModalForAllSongs;
+export default ModalForPlaylistSelector;

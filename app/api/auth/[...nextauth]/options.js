@@ -73,7 +73,6 @@ export const options = {
   ],
   secret: process.env.NEXTAUTH_SECRET,
 
-  
   // callbacks: {
   //   async jwt({ token, account, user }) {
   //     //initial sign in
@@ -110,11 +109,12 @@ export const options = {
       }
       return await refreshAccessToken(token);
     },
-    async session({ session, token, user }) {
+    async session({ session, token }) {
       // Send properties to the client, like an access_token from a provider.
       session.accessToken = token.accessToken;
-      //console.log("the session ", session);
-      //console.log("the token ", token);
+      session.user.id = token.id;
+      // console.log("the session ", session);
+      // console.log("the token ", token);
       return session;
     },
   },

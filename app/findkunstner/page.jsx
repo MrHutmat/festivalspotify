@@ -6,6 +6,7 @@ import Button from "../Components/Button";
 import ModalForAllSongs from "../Components/Modals/ModalForAllSongs";
 import OldButtonTest from "../Components/OldButtonTest";
 import options from "../api/auth/[...nextauth]/options";
+import ModalForPlaylistSelector from "../Components/Modals/ModalForPlaylistSelector";
 
 const Dashboard = async () => {
   const session = await getServerSession(options);
@@ -21,7 +22,14 @@ const Dashboard = async () => {
       <p>Welcome to the dashboard</p>
       <p>{JSON.stringify(session)}</p>
       <OldButtonTest />
-      <Button buttonText="Open Modal 1" modalContent={<ModalForAllSongs />} />
+      <Button
+        buttonText="Compared your liked songs artists to one of the festivals"
+        modalContent={<ModalForAllSongs />}
+      />
+      <Button
+        buttonText="Choose a playlist to check if that hans songs from artists coming"
+        modalContent={<ModalForPlaylistSelector />}
+      />
     </div>
   );
 };
