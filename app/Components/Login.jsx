@@ -27,7 +27,7 @@ export const Login = () => {
       onClick={() =>
         signIn("spotify", {
           callbackUrl:
-            "https://festivalspotify-91rv-plz9hpu6h-mathias-projects-3b4530a7.vercel.app//findkunstner",
+            "https://festivalspotify.vercel.app/findkunstner",
         })
       }
     >
