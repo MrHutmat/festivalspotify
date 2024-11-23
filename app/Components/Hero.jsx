@@ -2,7 +2,6 @@
 
 //THIS IS USED
 
-
 import React from "react";
 import Image from "next/image";
 import { AiOutlineFile } from "react-icons/ai";
@@ -10,8 +9,8 @@ import { motion } from "framer-motion";
 import { useSession } from "next-auth/react";
 
 const Hero = () => {
-    const { data: session } = useSession();
-    console.log("From Hero comp: " + session);
+  const { data: session } = useSession();
+  console.log("From Hero comp: " + session);
 
   return (
     <div className="z-10 col-start-1 row-start-1 grid h-screen place-items-center overflow-x-hidden">
@@ -55,12 +54,10 @@ const Hero = () => {
           <h1 className="text-5xl font-bold">
             Mit navn er <a className="text-turkish">Mathias.</a>
           </h1>
-          <p className="py-6">
-            {JSON.stringify(session)}
-          </p>
+          <p className="py-6">{JSON.stringify(session)}</p>
           <button className="inline-flex items-center rounded bg-turkish px-4 py-2 font-bold text-themelight hover:bg-darkturkish">
             <AiOutlineFile size={25} className="mr-2" />
-            <span>Her er mit CV</span>
+            <span>Her er mit CV test</span>
           </button>
         </motion.div>
       </div>
