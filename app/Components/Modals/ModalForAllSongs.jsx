@@ -1,5 +1,9 @@
 "use client";
 
+//THIS IS USED
+import roskildeLineUp from "../../utils/artists_spotify_roskilde.json" assert { type: "json" };
+import tinderboxLineUp from "../../utils/artists_spotify_tinderbox.json" assert { type: "json" };
+
 import { useState, useRef } from "react";
 import { allSavedSongs } from "../../utils/allSavedSongs";
 import { useSession } from "next-auth/react";
@@ -10,7 +14,7 @@ import { createPlaylistAndAddSongs } from "@/app/utils/createPlaylistAndAddSongs
 const ModalForAllSongs = () => {
   const { data: session } = useSession();
   const [selectedOption, setSelectedOption] = useState("option1");
-  const [commonArtist, setCommonArtist] = useState([]);
+  const [commonArtists, setCommonArtists] = useState([]);
   const [loading, setLoading] = useState(false);
   const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
   const [tracks, setTracks] = useState([]);
@@ -29,7 +33,7 @@ const ModalForAllSongs = () => {
 
   const getCommonArtistList = async (bands) => {
     const response = await allSavedSongs(session, bands);
-    setCommonArtist(response.commonElements);
+    setCommonArtists(response.commonElements);
     setTracks(response.allTracks);
     console.log(response);
     console.log(response.commonElements);
@@ -46,6 +50,7 @@ const ModalForAllSongs = () => {
       tracks,
       selectedOption
     );
+    // TODO: Show a message to the user that the playlist has been created
   };
 
   const handleSubmit = async (event) => {
@@ -56,9 +61,9 @@ const ModalForAllSongs = () => {
     // Define bands based on the selected radio option
     let bands;
     if (selectedOption === "option1") {
-      bands = ["Linkin Park", "Eminem", "Drake", "Kanye West", "Test"];
+      bands = roskildeLineUp;
     } else if (selectedOption === "option2") {
-      bands = ["Band X", "Band Y", "Band Z"];
+      bands = tinderboxLineUp;
     } else {
       bands = ["Band P", "Band Q", "Band R"];
     }
@@ -70,12 +75,19 @@ const ModalForAllSongs = () => {
   const handleClick = () => {
     setHasBeenSubmitted(false);
     setLoading(true);
-    const filteredObjects = tracks.filter((obj) => {
-      // Check if any of the artists in the object's list match the hardcoded artists
-      return obj.track.artists.some((artist) =>
-        commonArtist.includes(artist.name)
-      );
-    });
+    // const filteredObjects = tracks.filter((obj) => {
+    //   // Check if any of the artists in the object's list match the hardcoded artists
+    //   // Maybe need to modify this to check for artist ID instead of name
+    //   return obj.track.artists.some((artist) =>
+    //     commonArtists.some((common) => common.id === artist.id)
+    //   );
+    // });
+    const commonArtistsID = new Set(commonArtists.map((artist) => artist.id));
+
+    const filteredObjects = tracks.filter((obj) =>
+      obj.track.artists.some((artist) => commonArtistsID.has(artist.id))
+    );
+    console.log(filteredObjects);
     setLoading(false);
     setShowSongs(true);
     setTracks(filteredObjects);
@@ -131,7 +143,7 @@ const ModalForAllSongs = () => {
                   checked={selectedOption === "option2"}
                   onChange={handleOptionChange}
                 />
-                Test
+                Tinderbox
               </label>
 
               <label>
@@ -153,10 +165,10 @@ const ModalForAllSongs = () => {
       )}
       {hasBeenSubmitted && !loading && (
         <div>
-          {commonArtist.map((artist) => {
+          {commonArtists.map((artist) => {
             return (
-              <div key={artist}>
-                <p>{artist}</p>
+              <div key={artist.id}>
+                <p>{artist.name}</p>
               </div>
             );
           })}

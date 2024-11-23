@@ -1,5 +1,7 @@
 "use react";
 
+//THIS IS USED
+
 //import { PlayIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
 
@@ -42,12 +44,10 @@ const Song = ({ track, sno, playTrack, isPlaying }) => {
           <p className="w-36 truncate">
             {track.artists.map((artist, i) => {
               return (
-                <>
-                  <span key={artist.id} className="hover:underline">
-                    {artist.name}
-                  </span>
+                <React.Fragment key={artist.id}>
+                  <span className="hover:underline">{artist.name}</span>
                   <span>{i != track.artists.length - 1 ? ", " : null}</span>
-                </>
+                </React.Fragment>
               );
             })}
           </p>

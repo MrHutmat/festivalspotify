@@ -1,8 +1,14 @@
 // import { getServerSession } from "next-auth/next";
 // import { useSession } from "next-auth/react";
 
+//THIS IS USED
+
 export const allSavedSongs = async (session, bands) => {
-  const dummyList = bands;
+  //Maybe a switch statement for the different festivals here?
+  //Importing the csv file with spotify artists artist id's?
+  const festivalArtists = bands;
+
+  console.log(festivalArtists);
 
   // call for the session
 
@@ -24,37 +30,62 @@ export const allSavedSongs = async (session, bands) => {
     allTracks.push(...data.items);
 
     // Extract artists from the current batch of tracks
-    const names = data.items.flatMap((artist) =>
-      artist.track.artists.map((artist) => artist.name)
+    // 23-11-2024 Changed "names" to "artistData"
+    // So that I can add ID to the artist as well
+    // artist.track.artists.map((artist) => artist.name
+    const artistData = data.items.flatMap((artist) =>
+      // artist.track.artists.map((artist) => artist.name
+
+      artist.track.artists.map((artist) => ({
+        id: artist.id,
+        name: artist.name,
+      }))
     );
 
+    const uniqueArtists = [
+      ...new Map(artistData.map((artist) => [artist.id, artist])).values(),
+    ];
+
     // Add unique artists to the list
-    allArtists = [...new Set([...allArtists, ...names])];
+    // 23-11-2024 Changed names to artistData
+    // allArtists = [...new Set([...allArtists, ...artistData])];
+
+    allArtists = [
+      ...new Map(
+        [...allArtists, ...uniqueArtists].map((a) => [a.id, a])
+      ).values(),
+    ];
 
     // Update nextUrl for pagination
     nextUrl = data.next;
   }
   console.log(allArtists);
 
-  const findCommonElements = (dummyList, allArtists) => {
-    let dummyListSet = new Set(dummyList);
-    let allArtistsSet = new Set(allArtists);
+  const findCommonElements = (festivalArtists, allArtists) => {
+    // Old way before ID was added to the artist, still need to import the csv file with the artist ID's.
+    // let dummyListSet = new Set(dummyList);
+    // let allArtistsSet = new Set(allArtists);
 
-    // Initialize an empty array to store common elements
-    let commonElements = [];
+    // // Initialize an empty array to store common elements
+    // let commonElements = [];
 
-    for (let item of dummyListSet) {
-      if (allArtistsSet.has(item)) {
-        commonElements.push(item);
-      }
-    }
-    console.log(commonElements);
+    // for (let item of dummyListSet) {
+    //   if (allArtistsSet.has(item)) {
+    //     commonElements.push(item);
+    //   }
+    // }
+    // console.log(commonElements);
 
-    return commonElements;
+    const festivalArtistsID = new Set(
+      festivalArtists.map((artist) => artist.spotifyID)
+    );
+
+    return allArtists.filter((artist) => festivalArtistsID.has(artist.id));
   };
   console.log(allTracks);
 
-  const commonElements = findCommonElements(dummyList, allArtists);
+  const commonElements = findCommonElements(festivalArtists, allArtists);
+  console.log(commonElements);
 
-  return { commonElements, allTracks }
+  return { commonElements, allTracks };
 };

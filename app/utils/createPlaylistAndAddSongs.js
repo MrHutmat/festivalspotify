@@ -1,6 +1,10 @@
 // import { getServerSession } from "next-auth/next";
 // import { useSession } from "next-auth/react";
 
+
+//THIS IS USED
+
+
 export const createPlaylistAndAddSongs = async (
   session,
   tracks,

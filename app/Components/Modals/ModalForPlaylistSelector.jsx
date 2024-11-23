@@ -1,7 +1,9 @@
 "use client";
 
+import roskildeLineUp from "../../utils/artists_spotify_roskilde.json" assert { type: "json" };
+import tinderboxLineUp from "../../utils/artists_spotify_tinderbox.json" assert { type: "json" };
 import { useState, useRef, useEffect } from "react";
-import { allSavedSongs } from "../../utils/allSavedSongs";
+import { allPlaylistSongs } from "../../utils/allPlaylistSongs";
 import { showAllPlaylists } from "../../utils/showAllPlaylists";
 
 import { useSession } from "next-auth/react";
@@ -12,7 +14,8 @@ import { createPlaylistAndAddSongs } from "@/app/utils/createPlaylistAndAddSongs
 const ModalForPlaylistSelector = () => {
   const { data: session } = useSession();
   const [selectedOption, setSelectedOption] = useState("option1");
-  const [commonArtist, setCommonArtist] = useState([]);
+  const [playlistIsSelected, setPlaylistIsSelected] = useState(false);
+  const [commonArtists, setCommonArtists] = useState([]);
   const [loading, setLoading] = useState(true);
   const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
   const [tracks, setTracks] = useState([]);
@@ -21,11 +24,11 @@ const ModalForPlaylistSelector = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio());
   const [playlists, setPlaylists] = useState([]);
+  const [selectedPlaylist, setSelectedPlaylist] = useState(null);
   const [hover, setHover] = useState(false);
 
   //FOR TESTING
   //const hardCodedTracks = savedtracks.items;
-  const forWhenTesting = true;
 
   useEffect(() => {
     console.log("1" + session);
@@ -69,18 +72,30 @@ const ModalForPlaylistSelector = () => {
 
   // getAllPlaylists();
 
+
+  const handleCreatePlaylistClick = async () => {
+    await createPlaylist(tracks);
+  };
+
+  const createPlaylist = async (tracks) => {
+    const respone = await createPlaylistAndAddSongs(
+      session,
+      tracks,
+      selectedOption
+    );
+    // TODO: Show a message to the user that the playlist has been created
+  };
+
   const getCommonArtistList = async (bands) => {
-    const response = await allSavedSongs(session, bands);
-    setCommonArtist(response.commonElements);
+    const response = await allPlaylistSongs(session, bands, selectedPlaylist);
+    setCommonArtists(response.commonElements);
     setTracks(response.allTracks);
     console.log(response);
     console.log(response.commonElements);
     console.log(response.allTracks);
   };
 
-  const handleCreatePlaylistClick = async () => {
-    await createPlaylist(hardCodedTracks);
-  };
+
 
   //   const createPlaylist = async (tracks) => {
   //     const respone = await createPlaylistAndAddSongs(
@@ -90,6 +105,17 @@ const ModalForPlaylistSelector = () => {
   //     );
   //   };
 
+  const handlePlaylistOptionChange = (event) => {
+    setSelectedPlaylist(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handlePlaylistSubmit = (event) => {
+    event.preventDefault();
+    setSelectedPlaylist(selectedPlaylist);
+    setPlaylistIsSelected(true);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setHasBeenSubmitted(true);
@@ -98,9 +124,9 @@ const ModalForPlaylistSelector = () => {
     // Define bands based on the selected radio option
     let bands;
     if (selectedOption === "option1") {
-      bands = ["Linkin Park", "Eminem", "Drake", "Kanye West", "Test"];
+      bands = roskildeLineUp;
     } else if (selectedOption === "option2") {
-      bands = ["Band X", "Band Y", "Band Z"];
+      bands = tinderboxLineUp;
     } else {
       bands = ["Band P", "Band Q", "Band R"];
     }
@@ -112,12 +138,19 @@ const ModalForPlaylistSelector = () => {
   const handleClick = () => {
     setHasBeenSubmitted(false);
     setLoading(true);
-    const filteredObjects = tracks.filter((obj) => {
-      // Check if any of the artists in the object's list match the hardcoded artists
-      return obj.track.artists.some((artist) =>
-        commonArtist.includes(artist.name)
-      );
-    });
+    // const filteredObjects = tracks.filter((obj) => {
+    //   // Check if any of the artists in the object's list match the hardcoded artists
+    //   // Maybe need to modify this to check for artist ID instead of name
+    //   return obj.track.artists.some((artist) =>
+    //     commonArtists.some((common) => common.id === artist.id)
+    //   );
+    // });
+    const commonArtistsID = new Set(commonArtists.map((artist) => artist.id));
+
+    const filteredObjects = tracks.filter((obj) =>
+      obj.track.artists.some((artist) => commonArtistsID.has(artist.id))
+    );
+    console.log(filteredObjects);
     setLoading(false);
     setShowSongs(true);
     setTracks(filteredObjects);
@@ -149,59 +182,71 @@ const ModalForPlaylistSelector = () => {
           Her er mine 2 emner, som jeg har arbejdet med under 4. Semester på
         </p>
       </div>
-      {!hasBeenSubmitted && !loading && !showSongs && forWhenTesting && (
+      {!hasBeenSubmitted && !loading && !showSongs && !playlistIsSelected && (
         <div className="px-8 flex flex-col space-y-1 pb-28 max-h-[450px] overflow-auto">
-          {playlists.map((playlist, i) => {
-            return (
-              <div
-                key={playlist.id}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-                className="grid grid-cols-2 text-neutral-400 text-sm py-4 px-5 hover:bg-white hover:bg-opacity-10 rounded-lg cursor-default"
-              >
-                <div className="flex items-center space-x-4">
-                  <p className="w-5">{i + 1}</p>
-                  {/* <div className="h-4 w-4">{playlist.images[0].url}</div> */}
+          <form onSubmit={handlePlaylistSubmit}>
+            {playlists.map((playlist, i) => {
+              return (
+                <div
+                  key={playlist.id}
+                  onMouseEnter={() => setHover(true)}
+                  onMouseLeave={() => setHover(false)}
+                  className="grid grid-cols-2 text-neutral-400 text-sm py-4 px-5 hover:bg-white hover:bg-opacity-10 rounded-lg cursor-default"
+                >
+                  <input
+                    type="radio"
+                    value={playlist.id}
+                    checked={selectedPlaylist === playlist.id}
+                    onChange={handlePlaylistOptionChange}
+                  />
+                  <div className="flex items-center space-x-4">
+                    <p className="w-5">{i + 1}</p>
+                    {/* <div className="h-4 w-4">{playlist.images[0].url}</div> */}
 
-                  {/* {playlist?.images[0]?.url && (
+                    {/* {playlist?.images[0]?.url && (
                     <img className="h-4 w-4" src={playlist.images[0].url} />
                   )} */}
-                  {/* <img className="h-4 w-4" src={playlists[i].images[0].url} /> */}
+                    {/* <img className="h-4 w-4" src={playlists[i].images[0].url} /> */}
 
-                  {playlist.images && playlist.images.length > 0 ? (
-                    <img className="h-4 w-4" src={playlist.images[0].url} />
-                  ) : (
-                    <img
-                      className="h-4 w-4"
-                      src="https://i.scdn.co/image/ab67616d0000b273058d85d25752a6701564ba06"
-                    />
-                  )}
+                    {playlist.images && playlist.images.length > 0 ? (
+                      <img className="h-4 w-4" src={playlist.images[0].url} />
+                    ) : (
+                      <img
+                        className="h-4 w-4"
+                        src="https://i.scdn.co/image/ab67616d0000b273058d85d25752a6701564ba06"
+                      />
+                    )}
 
-                  <div>
-                    <p className="w-36 lg:w-64 truncate text-white text-base">
-                      {playlist.name}
+                    <div>
+                      <p className="w-36 lg:w-64 truncate text-white text-base">
+                        {playlist.name}
+                      </p>
+                      <p className="w-36 truncate">
+                        <>
+                          <span className="hover:underline">
+                            {playlist.owner.display_name}
+                          </span>
+                        </>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between ml-auto md:ml-0">
+                    <p className="w-40 truncate hidden md:inline">
+                      PlaceHolder for now
                     </p>
-                    <p className="w-36 truncate">
-                      <>
-                        <span className="hover:underline">
-                          {playlist.owner.display_name}
-                        </span>
-                      </>
-                    </p>
+                    <p>{playlist.tracks.total}</p>
                   </div>
                 </div>
-                <div className="flex items-center justify-between ml-auto md:ml-0">
-                  <p className="w-40 truncate hidden md:inline">
-                    PlaceHolder for now
-                  </p>
-                  <p>{playlist.tracks.total}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+            <div className="mx-10 hidden h-[300px] min-h-[1em] w-0.5 self-stretch bg-themegray opacity-10 xl:inline-block"></div>
+            <div className="flex-1 text-center">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
         </div>
       )}
-      {!hasBeenSubmitted && !showSongs && !forWhenTesting && (
+      {!hasBeenSubmitted && !showSongs && playlistIsSelected && (
         <form
           onSubmit={handleSubmit}
           className="flex justify-between text-start items-center"
@@ -225,7 +270,7 @@ const ModalForPlaylistSelector = () => {
                   checked={selectedOption === "option2"}
                   onChange={handleOptionChange}
                 />
-                Test
+                Tinderbox
               </label>
 
               <label>
@@ -247,10 +292,10 @@ const ModalForPlaylistSelector = () => {
       )}
       {hasBeenSubmitted && !loading && (
         <div>
-          {commonArtist.map((artist) => {
+          {commonArtists.map((artist) => {
             return (
-              <div key={artist}>
-                <p>{artist}</p>
+              <div key={artist.id}>
+                <p>{artist.name}</p>
               </div>
             );
           })}
@@ -266,6 +311,7 @@ const ModalForPlaylistSelector = () => {
       {loading && <p>Loading...</p>}
 
       {/* Change when not testing */}
+
       {showSongs && (
         <div className="text-white px-8 flex flex-col space-y-1 pb-28 max-h-[450px] overflow-auto">
           <div>
@@ -277,7 +323,7 @@ const ModalForPlaylistSelector = () => {
               Click Here
             </button>
           </div>
-          {track.map((track, i) => {
+          {tracks.map((track, i) => {
             return (
               <Song
                 key={track.track.id}

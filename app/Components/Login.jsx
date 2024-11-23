@@ -12,33 +12,29 @@ export const Login = () => {
   if (status === "authenticated") {
     return (
       <Link href={`/findkunstner`}>
-        <img src={session.user?.image} alt="" />
-      {/* <Image
+        {/* <Image
       width={32}
       height={32}
       src={session.user.image}
       alt="Profile Picture"
       /> */}
       </Link>
-    )
-
+    );
   }
 
   return (
-        <button
-          onClick={() =>
-            signIn("spotify", {
-              callbackUrl: "http://localhost:3000/findkunstner",
-            })
-          }
-        >
-          Login in
-        </button>
+    <button
+      onClick={() =>
+        signIn("spotify", {
+          callbackUrl: "http://localhost:3000/findkunstner",
+        })
+      }
+    >
+      Login in
+    </button>
   );
 };
 
-
-
 export const LogOut = () => {
   return <button onClick={() => signOut()}>Log out</button>;
-}
+};
