@@ -4,11 +4,9 @@ import roskildeLineUp from "../../utils/artists_spotify_roskilde.json" assert { 
 import tinderboxLineUp from "../../utils/artists_spotify_tinderbox.json" assert { type: "json" };
 import { useState, useRef, useEffect } from "react";
 import { allPlaylistSongs } from "../../utils/allPlaylistSongs";
-import { showAllPlaylists } from "../../utils/showAllPlaylists";
 
 import { useSession } from "next-auth/react";
 import Song from "../Song";
-import savedtracks from "../../utils/savedtracks.json";
 import { createPlaylistAndAddSongs } from "@/app/utils/createPlaylistAndAddSongs";
 
 const ModalForPlaylistSelector = () => {
@@ -27,13 +25,11 @@ const ModalForPlaylistSelector = () => {
   const [selectedPlaylist, setSelectedPlaylist] = useState(null);
   const [hover, setHover] = useState(false);
 
-  //FOR TESTING
-  //const hardCodedTracks = savedtracks.items;
-
+  // Maybe move this logic.
   useEffect(() => {
-    console.log("1" + session);
+    "1" + session;
     const showAllPlaylists = async (session) => {
-      console.log("2" + session);
+      "2" + session;
       let nextUrl = "https://api.spotify.com/v1/me/playlists?limit=50&offset=0"; // Replace with your initial URL
       let allPlaylists = [];
 
@@ -52,7 +48,6 @@ const ModalForPlaylistSelector = () => {
         // Update nextUrl for pagination
         nextUrl = data.next;
       }
-      console.log(allPlaylists[0].images[0].url);
       setPlaylists(allPlaylists);
       setLoading(false);
     };
@@ -62,16 +57,6 @@ const ModalForPlaylistSelector = () => {
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
-
-  //   const getAllPlaylists = async () => {
-  //     const response = await showAllPlaylists(session);
-  //     console.log(response);
-
-  //     setPlaylists(response);
-  //   };
-
-  // getAllPlaylists();
-
 
   const handleCreatePlaylistClick = async () => {
     await createPlaylist(tracks);
@@ -90,24 +75,10 @@ const ModalForPlaylistSelector = () => {
     const response = await allPlaylistSongs(session, bands, selectedPlaylist);
     setCommonArtists(response.commonElements);
     setTracks(response.allTracks);
-    console.log(response);
-    console.log(response.commonElements);
-    console.log(response.allTracks);
   };
-
-
-
-  //   const createPlaylist = async (tracks) => {
-  //     const respone = await createPlaylistAndAddSongs(
-  //       session,
-  //       tracks,
-  //       setSelectedOption
-  //     );
-  //   };
 
   const handlePlaylistOptionChange = (event) => {
     setSelectedPlaylist(event.target.value);
-    console.log(event.target.value);
   };
 
   const handlePlaylistSubmit = (event) => {
@@ -138,19 +109,12 @@ const ModalForPlaylistSelector = () => {
   const handleClick = () => {
     setHasBeenSubmitted(false);
     setLoading(true);
-    // const filteredObjects = tracks.filter((obj) => {
-    //   // Check if any of the artists in the object's list match the hardcoded artists
-    //   // Maybe need to modify this to check for artist ID instead of name
-    //   return obj.track.artists.some((artist) =>
-    //     commonArtists.some((common) => common.id === artist.id)
-    //   );
-    // });
+
     const commonArtistsID = new Set(commonArtists.map((artist) => artist.id));
 
     const filteredObjects = tracks.filter((obj) =>
       obj.track.artists.some((artist) => commonArtistsID.has(artist.id))
     );
-    console.log(filteredObjects);
     setLoading(false);
     setShowSongs(true);
     setTracks(filteredObjects);
@@ -201,12 +165,6 @@ const ModalForPlaylistSelector = () => {
                   />
                   <div className="flex items-center space-x-4">
                     <p className="w-5">{i + 1}</p>
-                    {/* <div className="h-4 w-4">{playlist.images[0].url}</div> */}
-
-                    {/* {playlist?.images[0]?.url && (
-                    <img className="h-4 w-4" src={playlist.images[0].url} />
-                  )} */}
-                    {/* <img className="h-4 w-4" src={playlists[i].images[0].url} /> */}
 
                     {playlist.images && playlist.images.length > 0 ? (
                       <img className="h-4 w-4" src={playlist.images[0].url} />
@@ -309,8 +267,6 @@ const ModalForPlaylistSelector = () => {
       )}
 
       {loading && <p>Loading...</p>}
-
-      {/* Change when not testing */}
 
       {showSongs && (
         <div className="text-white px-8 flex flex-col space-y-1 pb-28 max-h-[450px] overflow-auto">

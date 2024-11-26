@@ -1,7 +1,5 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import GetAllSongsArtists from "../Components/GetAllSongsArtists";
-import { allSavedSongs } from "../utils/allSavedSongs";
 import Button from "../Components/Button";
 import ModalForAllSongs from "../Components/Modals/ModalForAllSongs";
 import OldButtonTest from "../Components/OldButtonTest";
@@ -14,7 +12,6 @@ const Dashboard = async () => {
   if (!session) {
     redirect("/api/auth/signin");
   }
-  console.log(session + "session");
 
   return (
     <div className="text-white p-10 text-center">

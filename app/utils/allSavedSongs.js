@@ -1,6 +1,3 @@
-// import { getServerSession } from "next-auth/next";
-// import { useSession } from "next-auth/react";
-
 //THIS IS USED
 
 export const allSavedSongs = async (session, bands) => {
@@ -8,7 +5,7 @@ export const allSavedSongs = async (session, bands) => {
   //Importing the csv file with spotify artists artist id's?
   const festivalArtists = bands;
 
-  console.log(festivalArtists);
+  festivalArtists;
 
   // call for the session
 
@@ -34,8 +31,6 @@ export const allSavedSongs = async (session, bands) => {
     // So that I can add ID to the artist as well
     // artist.track.artists.map((artist) => artist.name
     const artistData = data.items.flatMap((artist) =>
-      // artist.track.artists.map((artist) => artist.name
-
       artist.track.artists.map((artist) => ({
         id: artist.id,
         name: artist.name,
@@ -48,7 +43,6 @@ export const allSavedSongs = async (session, bands) => {
 
     // Add unique artists to the list
     // 23-11-2024 Changed names to artistData
-    // allArtists = [...new Set([...allArtists, ...artistData])];
 
     allArtists = [
       ...new Map(
@@ -59,22 +53,10 @@ export const allSavedSongs = async (session, bands) => {
     // Update nextUrl for pagination
     nextUrl = data.next;
   }
-  console.log(allArtists);
+  allArtists;
 
   const findCommonElements = (festivalArtists, allArtists) => {
     // Old way before ID was added to the artist, still need to import the csv file with the artist ID's.
-    // let dummyListSet = new Set(dummyList);
-    // let allArtistsSet = new Set(allArtists);
-
-    // // Initialize an empty array to store common elements
-    // let commonElements = [];
-
-    // for (let item of dummyListSet) {
-    //   if (allArtistsSet.has(item)) {
-    //     commonElements.push(item);
-    //   }
-    // }
-    // console.log(commonElements);
 
     const festivalArtistsID = new Set(
       festivalArtists.map((artist) => artist.spotifyID)
@@ -82,10 +64,10 @@ export const allSavedSongs = async (session, bands) => {
 
     return allArtists.filter((artist) => festivalArtistsID.has(artist.id));
   };
-  console.log(allTracks);
+  allTracks;
 
   const commonElements = findCommonElements(festivalArtists, allArtists);
-  console.log(commonElements);
+  commonElements;
 
   return { commonElements, allTracks };
 };

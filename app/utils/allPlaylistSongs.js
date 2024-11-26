@@ -1,6 +1,3 @@
-// import { getServerSession } from "next-auth/next";
-// import { useSession } from "next-auth/react";
-
 //THIS IS USED
 
 export const allPlaylistSongs = async (session, bands, selectedPlaylist) => {
@@ -29,17 +26,15 @@ export const allPlaylistSongs = async (session, bands, selectedPlaylist) => {
     });
     const data = await response.json(); // Assuming the response is JSON
 
-    console.log(data);
+    data;
 
     allTracks.push(...data.items);
 
     // Extract artists from the current batch of tracks
     // 23-11-2024 Changed "names" to "artistData"
     // So that I can add ID to the artist as well
-    // artist.track.artists.map((artist) => artist.name
-    const artistData = data.items.flatMap((artist) =>
-      // artist.track.artists.map((artist) => artist.name
 
+    const artistData = data.items.flatMap((artist) =>
       artist.track.artists.map((artist) => ({
         id: artist.id,
         name: artist.name,
@@ -50,10 +45,6 @@ export const allPlaylistSongs = async (session, bands, selectedPlaylist) => {
       ...new Map(artistData.map((artist) => [artist.id, artist])).values(),
     ];
 
-    // Add unique artists to the list
-    // 23-11-2024 Changed names to artistData
-    // allArtists = [...new Set([...allArtists, ...artistData])];
-
     allArtists = [
       ...new Map(
         [...allArtists, ...uniqueArtists].map((a) => [a.id, a])
@@ -63,22 +54,10 @@ export const allPlaylistSongs = async (session, bands, selectedPlaylist) => {
     // Update nextUrl for pagination
     nextUrl = data.next;
   }
-  console.log(allArtists);
+  allArtists;
 
   const findCommonElements = (festivalArtists, allArtists) => {
     // Old way before ID was added to the artist, still need to import the csv file with the artist ID's.
-    // let dummyListSet = new Set(dummyList);
-    // let allArtistsSet = new Set(allArtists);
-
-    // // Initialize an empty array to store common elements
-    // let commonElements = [];
-
-    // for (let item of dummyListSet) {
-    //   if (allArtistsSet.has(item)) {
-    //     commonElements.push(item);
-    //   }
-    // }
-    // console.log(commonElements);
 
     const festivalArtistsID = new Set(
       festivalArtists.map((artist) => artist.spotifyID)
@@ -86,10 +65,10 @@ export const allPlaylistSongs = async (session, bands, selectedPlaylist) => {
 
     return allArtists.filter((artist) => festivalArtistsID.has(artist.id));
   };
-  console.log(allTracks);
+  allTracks;
 
   const commonElements = findCommonElements(festivalArtists, allArtists);
-  console.log(commonElements);
+  commonElements;
 
   return { commonElements, allTracks };
 };

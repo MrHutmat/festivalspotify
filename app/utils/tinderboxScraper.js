@@ -17,7 +17,7 @@ async function fetchHTML(url) {
 async function getArtists() {
   const $ = await fetchHTML(BASE_URL);
   if (!$) {
-    console.log("Error fetching data from the url upsi");
+    ("Error fetching data from the url upsi");
     return [];
   }
 
@@ -46,7 +46,7 @@ async function getSpotifyId(artistPageUrl) {
       "data-lazy-src"
     );
     if (!spotifyEmbedUrl) return null;
-    console.log(spotifyEmbedUrl);
+    spotifyEmbedUrl;
 
     const match = spotifyEmbedUrl.match(/artist\/([\w\d]+)/);
     return match ? match[1] : null;
@@ -62,23 +62,17 @@ async function main() {
   const artists = await getArtists();
 
   for (const artist of artists) {
-    console.log(`Processing ${artist.name}...`);
+    `Processing ${artist.name}...`;
     const spotifyID = await getSpotifyId(artist.link);
     results.push({ name: artist.name, spotifyID: spotifyID || "N/A" });
   }
-
-  // const csvContent = results
-  //   .map(({ name, spotifyUrl }) => `${name},${spotifyUrl || "N/A"}`)
-  //   .join("\n");
-
-  // fs.writeFileSync("artists_spotify_tinderbox.csv", csvContent);
 
   fs.writeFileSync(
     "artists_spotify_tinderbox.json",
     JSON.stringify(results, null, 2)
   );
 
-  console.log("Scraping completed. Data saved to artists_spotify.csv");
+  ("Scraping completed. Data saved to artists_spotify.csv");
 }
 
 main();

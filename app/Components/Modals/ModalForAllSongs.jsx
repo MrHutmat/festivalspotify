@@ -8,7 +8,6 @@ import { useState, useRef } from "react";
 import { allSavedSongs } from "../../utils/allSavedSongs";
 import { useSession } from "next-auth/react";
 import Song from "../Song";
-import savedtracks from "../../utils/savedtracks.json";
 import { createPlaylistAndAddSongs } from "@/app/utils/createPlaylistAndAddSongs";
 
 const ModalForAllSongs = () => {
@@ -23,10 +22,6 @@ const ModalForAllSongs = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio());
 
-  //FOR TESTING
-  //const hardCodedTracks = savedtracks.items;
-  //const forWhenTesting = true;
-
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
@@ -35,9 +30,6 @@ const ModalForAllSongs = () => {
     const response = await allSavedSongs(session, bands);
     setCommonArtists(response.commonElements);
     setTracks(response.allTracks);
-    console.log(response);
-    console.log(response.commonElements);
-    console.log(response.allTracks);
   };
 
   const handleCreatePlaylistClick = async () => {
@@ -75,19 +67,12 @@ const ModalForAllSongs = () => {
   const handleClick = () => {
     setHasBeenSubmitted(false);
     setLoading(true);
-    // const filteredObjects = tracks.filter((obj) => {
-    //   // Check if any of the artists in the object's list match the hardcoded artists
-    //   // Maybe need to modify this to check for artist ID instead of name
-    //   return obj.track.artists.some((artist) =>
-    //     commonArtists.some((common) => common.id === artist.id)
-    //   );
-    // });
+
     const commonArtistsID = new Set(commonArtists.map((artist) => artist.id));
 
     const filteredObjects = tracks.filter((obj) =>
       obj.track.artists.some((artist) => commonArtistsID.has(artist.id))
     );
-    console.log(filteredObjects);
     setLoading(false);
     setShowSongs(true);
     setTracks(filteredObjects);

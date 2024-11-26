@@ -10,7 +10,6 @@ import { useSession } from "next-auth/react";
 
 const Hero = () => {
   const { data: session } = useSession();
-  console.log("From Hero comp: " + session);
 
   return (
     <div className="z-10 col-start-1 row-start-1 grid h-screen place-items-center overflow-x-hidden">
@@ -29,15 +28,7 @@ const Hero = () => {
           }}
           src="/images/logoNoBorder.png"
           className="h-[250px] w-[250px] max-w-sm rounded-2xl shadow-2xl md:h-[384px] md:w-[384px]"
-        >
-          {/* <Image
-              alt="Profile picture"
-              className="max-w-sm rounded-2xl shadow-2xl"
-              height="500"
-              width="500"
-              src="/images/logoNoBorder.png"
-            /> */}
-        </motion.img>
+        ></motion.img>
         <motion.div
           initial={{
             x: -100,

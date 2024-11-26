@@ -2,7 +2,6 @@
 
 //THIS IS USED
 
-//import { PlayIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
 
 const Song = ({ track, sno, playTrack, isPlaying }) => {

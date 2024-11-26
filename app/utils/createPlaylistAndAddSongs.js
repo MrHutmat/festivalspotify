@@ -1,9 +1,4 @@
-// import { getServerSession } from "next-auth/next";
-// import { useSession } from "next-auth/react";
-
-
 //THIS IS USED
-
 
 export const createPlaylistAndAddSongs = async (
   session,
@@ -40,14 +35,14 @@ export const createPlaylistAndAddSongs = async (
       }
     );
     const data = await response.json();
-    console.log(data.id);
+    data.id;
 
     return data.id;
   };
 
   const getSongsUris = (tracks) => {
     const songsUriList = tracks.map((track) => track.track.uri);
-    console.log(songsUriList);
+    songsUriList;
     return songsUriList;
   };
 
@@ -71,61 +66,4 @@ export const createPlaylistAndAddSongs = async (
   };
 
   addSongsToPlaylist();
-
-  // Add songs to the playlist
-
-  // async function addSongs() {
-  //   const response = await fetch(
-  //     "https://api.spotify.com/v1/me/tracks?limit=50",
-  //     {
-  //       headers: {
-  //         Authorization: `Bearer ${session.accessToken}`,
-  //       },
-  //     }
-  //   );
-  // }
-
-  // const response = await fetch(nextUrl, {
-  //   headers: {
-  //     Authorization: `Bearer ${session.accessToken}`,
-  //   },
-  // });
-  // const data = await response.json(); // Assuming the response is JSON
-
-  // allTracks.push(...data.items);
-
-  // // Extract artists from the current batch of tracks
-  // const names = data.items.flatMap((artist) =>
-  //   artist.track.artists.map((artist) => artist.name)
-  // );
-
-  // // Add unique artists to the list
-  // allArtists = [...new Set([...allArtists, ...names])];
-
-  // // Update nextUrl for pagination
-  // nextUrl = data.next;
-
-  // console.log(allArtists);
-
-  // const findCommonElements = (dummyList, allArtists) => {
-  //   let dummyListSet = new Set(dummyList);
-  //   let allArtistsSet = new Set(allArtists);
-
-  //   // Initialize an empty array to store common elements
-  //   let commonElements = [];
-
-  //   for (let item of dummyListSet) {
-  //     if (allArtistsSet.has(item)) {
-  //       commonElements.push(item);
-  //     }
-  //   }
-  //   console.log(commonElements);
-
-  //   return commonElements;
-  // };
-  // console.log(allTracks);
-
-  // const commonElements = findCommonElements(dummyList, allArtists);
-
-  // return { commonElements, allTracks };
 };

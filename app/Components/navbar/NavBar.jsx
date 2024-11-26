@@ -2,26 +2,15 @@
 
 import React from "react";
 
-import Logo from "./Logo";
 import Socials from "./Socials";
-import NavItems from "./NavItems";
+
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
 import { LogOut, Login } from "../Login";
 import AuthCheck from "../AuthCheck";
-//import { useWindowDimension } from "@/Hooks/useWindowDimension";
-
-{
-  /* <div className="sticky top-0 bg-themeblack mt-7 z-10">
-      <div className="mx-auto flex justify-between items-start md:items-center p-2 max-w-7xl px-3">
-      
-      <div className="sticky p-5 justify-between top-0 flex bg-themeblack mt-7 z-10 max-w-7xl items-start mx-auto">
-      <div className="flex flex-row items-center">
-      */
-}
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
