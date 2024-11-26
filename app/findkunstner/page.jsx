@@ -2,7 +2,6 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import Button from "../Components/Button";
 import ModalForAllSongs from "../Components/Modals/ModalForAllSongs";
-import OldButtonTest from "../Components/OldButtonTest";
 import options from "../api/auth/[...nextauth]/options";
 import ModalForPlaylistSelector from "../Components/Modals/ModalForPlaylistSelector";
 
@@ -18,7 +17,6 @@ const Dashboard = async () => {
       <h1 className="text-3xl mb-5">Dashboard</h1>
       <p>Welcome to the dashboard</p>
       <p>{JSON.stringify(session)}</p>
-      <OldButtonTest />
       <Button
         buttonText="Compared your liked songs artists to one of the festivals"
         modalContent={<ModalForAllSongs />}
