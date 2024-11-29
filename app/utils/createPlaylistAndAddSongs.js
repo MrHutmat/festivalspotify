@@ -35,14 +35,12 @@ export const createPlaylistAndAddSongs = async (
       }
     );
     const data = await response.json();
-    data.id;
 
     return data.id;
   };
 
   const getSongsUris = (tracks) => {
     const songsUriList = tracks.map((track) => track.track.uri);
-    songsUriList;
     return songsUriList;
   };
 

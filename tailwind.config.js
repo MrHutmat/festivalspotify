@@ -10,10 +10,12 @@ module.exports = {
       colors: {
         darkturkish: "#45a29e",
         turkish: "#66fcf1",
-        themegray: "#c5c6c7",
+        oldthemegray: "#c5c6c7",
         themeblack: "#0b0c10",
-        themelight: "#1f2833",
+        oldthemelight: "#1f2833",
         themepink: "#f652a0",
+        themegray: "#1e1e1e",
+        themelight: "#282828",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

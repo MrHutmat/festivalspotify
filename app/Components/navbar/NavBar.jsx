@@ -46,7 +46,7 @@ const NavBar = () => {
 
               <p className="pl-1 pr-3 text-lg font-bold text-themegray">MENU</p>
             </div>
-            <div className="text-themegray flex">
+            <div className="text-themegray flex text-turkish">
               <Login />
               <AuthCheck>
                 <LogOut />

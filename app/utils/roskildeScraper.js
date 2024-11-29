@@ -18,7 +18,7 @@ async function fetchHTML(url) {
 async function getArtists() {
   const $ = await fetchHTML(LINEUP_URL);
   if (!$) {
-    ("Error fetching data from the url upsi");
+    console.log("Error fetching data from the url upsi");
     return [];
   }
 
@@ -51,7 +51,7 @@ async function main() {
   const artists = await getArtists();
 
   for (const artist of artists) {
-    `Processing ${artist.name}...`;
+    console.log(`Processing ${artist.name}...`);
     const spotifyID = await getSpotifyId(artist.link);
     results.push({ name: artist.name, spotifyID: spotifyID || "N/A" });
   }
@@ -60,7 +60,6 @@ async function main() {
     "artists_spotify_roskilde.json",
     JSON.stringify(results, null, 2)
   );
-  ("Scraping completed. Data saved to artists_spotify.csv");
 }
 
 main();

@@ -27,9 +27,7 @@ const ModalForPlaylistSelector = () => {
 
   // Maybe move this logic.
   useEffect(() => {
-    "1" + session;
     const showAllPlaylists = async (session) => {
-      "2" + session;
       let nextUrl = "https://api.spotify.com/v1/me/playlists?limit=50&offset=0"; // Replace with your initial URL
       let allPlaylists = [];
 
@@ -137,6 +135,8 @@ const ModalForPlaylistSelector = () => {
       }
     }
   };
+  console.log("playlists", playlists);
+  console.log("selectedPlaylist", playlists.id);
 
   return (
     <div className="max-h-[550px]">

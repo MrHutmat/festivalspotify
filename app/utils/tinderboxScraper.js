@@ -17,7 +17,7 @@ async function fetchHTML(url) {
 async function getArtists() {
   const $ = await fetchHTML(BASE_URL);
   if (!$) {
-    ("Error fetching data from the url upsi");
+    console.log("Error fetching data from the url upsi");
     return [];
   }
 
@@ -46,7 +46,6 @@ async function getSpotifyId(artistPageUrl) {
       "data-lazy-src"
     );
     if (!spotifyEmbedUrl) return null;
-    spotifyEmbedUrl;
 
     const match = spotifyEmbedUrl.match(/artist\/([\w\d]+)/);
     return match ? match[1] : null;
@@ -62,7 +61,7 @@ async function main() {
   const artists = await getArtists();
 
   for (const artist of artists) {
-    `Processing ${artist.name}...`;
+    console.log(`Processing ${artist.name}...`);
     const spotifyID = await getSpotifyId(artist.link);
     results.push({ name: artist.name, spotifyID: spotifyID || "N/A" });
   }
@@ -71,8 +70,6 @@ async function main() {
     "artists_spotify_tinderbox.json",
     JSON.stringify(results, null, 2)
   );
-
-  ("Scraping completed. Data saved to artists_spotify.csv");
 }
 
 main();

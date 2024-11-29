@@ -5,7 +5,7 @@ export const allSavedSongs = async (session, bands) => {
   //Importing the csv file with spotify artists artist id's?
   const festivalArtists = bands;
 
-  festivalArtists;
+
 
   // call for the session
 
@@ -53,7 +53,6 @@ export const allSavedSongs = async (session, bands) => {
     // Update nextUrl for pagination
     nextUrl = data.next;
   }
-  allArtists;
 
   const findCommonElements = (festivalArtists, allArtists) => {
     // Old way before ID was added to the artist, still need to import the csv file with the artist ID's.
@@ -64,10 +63,8 @@ export const allSavedSongs = async (session, bands) => {
 
     return allArtists.filter((artist) => festivalArtistsID.has(artist.id));
   };
-  allTracks;
 
   const commonElements = findCommonElements(festivalArtists, allArtists);
-  commonElements;
 
   return { commonElements, allTracks };
 };

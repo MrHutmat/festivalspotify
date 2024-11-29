@@ -26,7 +26,6 @@ export const allPlaylistSongs = async (session, bands, selectedPlaylist) => {
     });
     const data = await response.json(); // Assuming the response is JSON
 
-    data;
 
     allTracks.push(...data.items);
 
@@ -54,7 +53,6 @@ export const allPlaylistSongs = async (session, bands, selectedPlaylist) => {
     // Update nextUrl for pagination
     nextUrl = data.next;
   }
-  allArtists;
 
   const findCommonElements = (festivalArtists, allArtists) => {
     // Old way before ID was added to the artist, still need to import the csv file with the artist ID's.
@@ -65,10 +63,8 @@ export const allPlaylistSongs = async (session, bands, selectedPlaylist) => {
 
     return allArtists.filter((artist) => festivalArtistsID.has(artist.id));
   };
-  allTracks;
 
   const commonElements = findCommonElements(festivalArtists, allArtists);
-  commonElements;
 
   return { commonElements, allTracks };
 };
