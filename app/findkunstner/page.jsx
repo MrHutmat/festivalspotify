@@ -10,6 +10,8 @@ import ModalContainer from "../Components/ModalContainer";
 const Dashboard = async () => {
   const session = await getServerSession(options);
 
+  // TODO: Make sure the session is refreshed
+
   if (!session) {
     redirect("/api/auth/signin");
   }

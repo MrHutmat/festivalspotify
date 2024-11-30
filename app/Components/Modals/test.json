@@ -1,0 +1,2202 @@
+[
+    null,
+    {
+        "collaborative": false,
+        "description": "A musical time capsule from the past has been unsealed…!",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/7Cr6DYmWuqUGUHeI9MqVNX"
+        },
+        "href": "https://api.spotify.com/v1/playlists/7Cr6DYmWuqUGUHeI9MqVNX",
+        "id": "7Cr6DYmWuqUGUHeI9MqVNX",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8439a3344022c300cbb0baa6c8",
+                "width": null
+            }
+        ],
+        "name": "My 2023 Playlist in a Bottle",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAABMnM7Z0BRXzKSZHFUq2ucXqo2XoF",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/7Cr6DYmWuqUGUHeI9MqVNX/tracks",
+            "total": 5
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7Cr6DYmWuqUGUHeI9MqVNX"
+    },
+    null,
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/5dWRKTzNHGLXlq6lva1hej"
+        },
+        "href": "https://api.spotify.com/v1/playlists/5dWRKTzNHGLXlq6lva1hej",
+        "id": "5dWRKTzNHGLXlq6lva1hej",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e02413a6c2c7b296d98171e5e21ab67616d00001e02a19cee952b6dae128d68f116ab67616d00001e02a2e4774009cc5d4a14eb899aab67616d00001e02d4d4929a3a86fe2f9fadbd42",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e02413a6c2c7b296d98171e5e21ab67616d00001e02a19cee952b6dae128d68f116ab67616d00001e02a2e4774009cc5d4a14eb899aab67616d00001e02d4d4929a3a86fe2f9fadbd42",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e02413a6c2c7b296d98171e5e21ab67616d00001e02a19cee952b6dae128d68f116ab67616d00001e02a2e4774009cc5d4a14eb899aab67616d00001e02d4d4929a3a86fe2f9fadbd42",
+                "width": 60
+            }
+        ],
+        "name": "Nummer 2",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAC3owQg3jSEoysQnnmpVSttFG7X5Q",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/5dWRKTzNHGLXlq6lva1hej/tracks",
+            "total": 10
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5dWRKTzNHGLXlq6lva1hej"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/0yUCnEIlmlLPx2k72WQ9xB"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0yUCnEIlmlLPx2k72WQ9xB",
+        "id": "0yUCnEIlmlLPx2k72WQ9xB",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0244cb13558d57f5a066fac381ab67616d00001e0266305d4a5a0ccb9968c800a2ab67616d00001e0277ada0863603903f57b34369ab67616d00001e02c9d4463f02ee31ed1e96413a",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0244cb13558d57f5a066fac381ab67616d00001e0266305d4a5a0ccb9968c800a2ab67616d00001e0277ada0863603903f57b34369ab67616d00001e02c9d4463f02ee31ed1e96413a",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0244cb13558d57f5a066fac381ab67616d00001e0266305d4a5a0ccb9968c800a2ab67616d00001e0277ada0863603903f57b34369ab67616d00001e02c9d4463f02ee31ed1e96413a",
+                "width": 60
+            }
+        ],
+        "name": "Min playliste nr. 33",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAADV85OdAHYdFv8sXByWv/9U96gqKK",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/0yUCnEIlmlLPx2k72WQ9xB/tracks",
+            "total": 12
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0yUCnEIlmlLPx2k72WQ9xB"
+    },
+    null,
+    null,
+    null,
+    {
+        "collaborative": false,
+        "description": "A weekly countdown of the top 10 songs in the alternative music scene. Like TRL, but for pop punk, emo, metalcore, etc. Playlist also includes other songs in my personal rotation this week. TikTok&#x2F;IG @jesealee",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/7M3lwAY5fVpXQX84RjCt2h"
+        },
+        "href": "https://api.spotify.com/v1/playlists/7M3lwAY5fVpXQX84RjCt2h",
+        "id": "7M3lwAY5fVpXQX84RjCt2h",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da842f84f41eb81c85431bcadbfe",
+                "width": null
+            }
+        ],
+        "name": "Jesea Lee's Top 10 Trending Tracks (The Distorted 10)",
+        "owner": {
+            "display_name": "Jesea Lee",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/1281170391"
+            },
+            "href": "https://api.spotify.com/v1/users/1281170391",
+            "id": "1281170391",
+            "type": "user",
+            "uri": "spotify:user:1281170391"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAJUeaWN7QjdWAPWdpIu65Rur9MUlAy",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/7M3lwAY5fVpXQX84RjCt2h/tracks",
+            "total": 193
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7M3lwAY5fVpXQX84RjCt2h"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/10Q1AfkBspUmcrjVOyB2At"
+        },
+        "href": "https://api.spotify.com/v1/playlists/10Q1AfkBspUmcrjVOyB2At",
+        "id": "10Q1AfkBspUmcrjVOyB2At",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0256c0f28ebc9be14c224bad5dab67616d00001e027459992b444de38842b9bee7ab67616d00001e02da07b89dd0eaccb4f2cf3331ab67616d00001e02f7db43292a6a99b21b51d5b4",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0256c0f28ebc9be14c224bad5dab67616d00001e027459992b444de38842b9bee7ab67616d00001e02da07b89dd0eaccb4f2cf3331ab67616d00001e02f7db43292a6a99b21b51d5b4",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0256c0f28ebc9be14c224bad5dab67616d00001e027459992b444de38842b9bee7ab67616d00001e02da07b89dd0eaccb4f2cf3331ab67616d00001e02f7db43292a6a99b21b51d5b4",
+                "width": 60
+            }
+        ],
+        "name": "Walk",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAA2mum4M8u32Av7IMWKkl25aCNTD+i",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/10Q1AfkBspUmcrjVOyB2At/tracks",
+            "total": 342
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:10Q1AfkBspUmcrjVOyB2At"
+    },
+    {
+        "collaborative": false,
+        "description": "The top songs released this week from rock to alternative. TikTok&#x2F;IG @jesealee",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/6Wv3wOz2WnduRGfopyP4Ap"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6Wv3wOz2WnduRGfopyP4Ap",
+        "id": "6Wv3wOz2WnduRGfopyP4Ap",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84e735fa910b0705704536427d",
+                "width": null
+            }
+        ],
+        "name": "New Scene Sunday ",
+        "owner": {
+            "display_name": "Jesea Lee",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/1281170391"
+            },
+            "href": "https://api.spotify.com/v1/users/1281170391",
+            "id": "1281170391",
+            "type": "user",
+            "uri": "spotify:user:1281170391"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAfDFM8bZZRmqPGBeA6PeKaoaOJxOsO",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/6Wv3wOz2WnduRGfopyP4Ap/tracks",
+            "total": 132
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6Wv3wOz2WnduRGfopyP4Ap"
+    },
+    null,
+    null,
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/18gxVBmvVBYwLcze8R6Bp5"
+        },
+        "href": "https://api.spotify.com/v1/playlists/18gxVBmvVBYwLcze8R6Bp5",
+        "id": "18gxVBmvVBYwLcze8R6Bp5",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84db1983e5d12cd8b889e95862",
+                "width": null
+            }
+        ],
+        "name": "Filosofi A",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAo/A0UmRrwFv+v5bd5aRx0i7NC7vP",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/18gxVBmvVBYwLcze8R6Bp5/tracks",
+            "total": 165
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:18gxVBmvVBYwLcze8R6Bp5"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/05w0PAbC9wsteIq0PDV1on"
+        },
+        "href": "https://api.spotify.com/v1/playlists/05w0PAbC9wsteIq0PDV1on",
+        "id": "05w0PAbC9wsteIq0PDV1on",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e027f329fe2f47d2c4abb121986ab67616d00001e02d3129712ceff55a3278ccb6aab67616d00001e02f0c36c1e4b9dcac2c566cf15ab67616d00001e02fb41d8226239a35d2facf4b6",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e027f329fe2f47d2c4abb121986ab67616d00001e02d3129712ceff55a3278ccb6aab67616d00001e02f0c36c1e4b9dcac2c566cf15ab67616d00001e02fb41d8226239a35d2facf4b6",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e027f329fe2f47d2c4abb121986ab67616d00001e02d3129712ceff55a3278ccb6aab67616d00001e02f0c36c1e4b9dcac2c566cf15ab67616d00001e02fb41d8226239a35d2facf4b6",
+                "width": 60
+            }
+        ],
+        "name": "WoW PvP Old School",
+        "owner": {
+            "display_name": "Dean",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/preknight"
+            },
+            "href": "https://api.spotify.com/v1/users/preknight",
+            "id": "preknight",
+            "type": "user",
+            "uri": "spotify:user:preknight"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAA8ZgQ3qNspd9hnJzOkBbDb8uP7SJc",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/05w0PAbC9wsteIq0PDV1on/tracks",
+            "total": 191
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:05w0PAbC9wsteIq0PDV1on"
+    },
+    {
+        "collaborative": false,
+        "description": "Feel free to send me suggestions at Wemby_@hotmail.com, if you want music added to the playlist.",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/3eDqJb37F8GGuM1fkoeE0k"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3eDqJb37F8GGuM1fkoeE0k",
+        "id": "3eDqJb37F8GGuM1fkoeE0k",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da846b2fc35ed87b337773514345",
+                "width": null
+            }
+        ],
+        "name": "PvP Music (Songs used in old school WoW PvP movies)",
+        "owner": {
+            "display_name": "Robin Wemba Wennberg",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/112942035"
+            },
+            "href": "https://api.spotify.com/v1/users/112942035",
+            "id": "112942035",
+            "type": "user",
+            "uri": "spotify:user:112942035"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAA65C/DpIMDrO7nz6tC55cVW3uvnhK",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/3eDqJb37F8GGuM1fkoeE0k/tracks",
+            "total": 175
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3eDqJb37F8GGuM1fkoeE0k"
+    },
+    null,
+    null,
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/7suGF54kQ4xRvkOnxqW4G9"
+        },
+        "href": "https://api.spotify.com/v1/playlists/7suGF54kQ4xRvkOnxqW4G9",
+        "id": "7suGF54kQ4xRvkOnxqW4G9",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0213b3e37318a0c247b550bccdab67616d00001e023d75fe24ebd1741bb74603b9ab67616d00001e02e6d489d359c546fea254f440ab67616d00001e02ef24c3fdbf856340d55cfeb2",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0213b3e37318a0c247b550bccdab67616d00001e023d75fe24ebd1741bb74603b9ab67616d00001e02e6d489d359c546fea254f440ab67616d00001e02ef24c3fdbf856340d55cfeb2",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0213b3e37318a0c247b550bccdab67616d00001e023d75fe24ebd1741bb74603b9ab67616d00001e02e6d489d359c546fea254f440ab67616d00001e02ef24c3fdbf856340d55cfeb2",
+                "width": 60
+            }
+        ],
+        "name": "Ed setlist",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAIZ865S/QwjDLht/BEosuUg0TFNX4",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/7suGF54kQ4xRvkOnxqW4G9/tracks",
+            "total": 27
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7suGF54kQ4xRvkOnxqW4G9"
+    },
+    null,
+    null,
+    {
+        "collaborative": false,
+        "description": "Saddest playlist on Spotify! Updated-Biweekly. Inquires: Maskedmortalmgmt@gmail.com | Instagram: @maskedmortal",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/360KXrpATI9uMgBlFdtvfX"
+        },
+        "href": "https://api.spotify.com/v1/playlists/360KXrpATI9uMgBlFdtvfX",
+        "id": "360KXrpATI9uMgBlFdtvfX",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84787589c0d7809aaa036de232",
+                "width": null
+            }
+        ],
+        "name": "My Heart Physically Hurts. Pain.",
+        "owner": {
+            "display_name": "Masked Mortal",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/1246680270"
+            },
+            "href": "https://api.spotify.com/v1/users/1246680270",
+            "id": "1246680270",
+            "type": "user",
+            "uri": "spotify:user:1246680270"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAADfSo/sDjRC5NdaaLH02Fkf+awk6cc",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/360KXrpATI9uMgBlFdtvfX/tracks",
+            "total": 112
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:360KXrpATI9uMgBlFdtvfX"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/0bYLZE3Wlosvv97Cf61rFS"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0bYLZE3Wlosvv97Cf61rFS",
+        "id": "0bYLZE3Wlosvv97Cf61rFS",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0208a1b1e0674086d3f1995e1bab67616d00001e021bb1db39abc18755d7ab2114ab67616d00001e02db687db0afb257abdee10816ab67616d00001e02e8b066f70c206551210d902b",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0208a1b1e0674086d3f1995e1bab67616d00001e021bb1db39abc18755d7ab2114ab67616d00001e02db687db0afb257abdee10816ab67616d00001e02e8b066f70c206551210d902b",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0208a1b1e0674086d3f1995e1bab67616d00001e021bb1db39abc18755d7ab2114ab67616d00001e02db687db0afb257abdee10816ab67616d00001e02e8b066f70c206551210d902b",
+                "width": 60
+            }
+        ],
+        "name": "Green day setlisten",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAGVF6rFUBWFnQT11VS7EUyB2/ojCV",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/0bYLZE3Wlosvv97Cf61rFS/tracks",
+            "total": 24
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0bYLZE3Wlosvv97Cf61rFS"
+    },
+    {
+        "collaborative": false,
+        "description": "Possibly the greatest playlist of all time.  twitch.tv&#x2F;fragnance",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/6wUV2gAg3ZMAG6zWPNzL1p"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6wUV2gAg3ZMAG6zWPNzL1p",
+        "id": "6wUV2gAg3ZMAG6zWPNzL1p",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8444b6a7e24244d4ee924e4a90",
+                "width": null
+            }
+        ],
+        "name": "#Sweetspot",
+        "owner": {
+            "display_name": "Jimmy Landqvist",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/jimmpyy"
+            },
+            "href": "https://api.spotify.com/v1/users/jimmpyy",
+            "id": "jimmpyy",
+            "type": "user",
+            "uri": "spotify:user:jimmpyy"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAU5vjtNIhLcse9x+9pNJNpmQ9fNwp+",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/6wUV2gAg3ZMAG6zWPNzL1p/tracks",
+            "total": 3553
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6wUV2gAg3ZMAG6zWPNzL1p"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/4owccF3JewBO9pHfXla05k"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4owccF3JewBO9pHfXla05k",
+        "id": "4owccF3JewBO9pHfXla05k",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0208181b9f840a06e7a071cf72ab67616d00001e023b6773d6e0df6eedefb20190ab67616d00001e025ef700b0fb079793f8b0d774ab67616d00001e029c72b249fcaa04d074c1dfcd",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0208181b9f840a06e7a071cf72ab67616d00001e023b6773d6e0df6eedefb20190ab67616d00001e025ef700b0fb079793f8b0d774ab67616d00001e029c72b249fcaa04d074c1dfcd",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0208181b9f840a06e7a071cf72ab67616d00001e023b6773d6e0df6eedefb20190ab67616d00001e025ef700b0fb079793f8b0d774ab67616d00001e029c72b249fcaa04d074c1dfcd",
+                "width": 60
+            }
+        ],
+        "name": "Cigarstuen",
+        "owner": {
+            "display_name": "Rasmus",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/119375936"
+            },
+            "href": "https://api.spotify.com/v1/users/119375936",
+            "id": "119375936",
+            "type": "user",
+            "uri": "spotify:user:119375936"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAobZNJE3Dt1szw5OBQMPXti3igd1t",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/4owccF3JewBO9pHfXla05k/tracks",
+            "total": 162
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4owccF3JewBO9pHfXla05k"
+    },
+    {
+        "collaborative": false,
+        "description": "A daily selection of chill beats - perfect to help you relax &amp; study 📚  <a href=\"https://spoti.fi/48IreC3\">Click here if you need lofi sleep 💤 </a>",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0vvXsWCC9xrXsKd4FyS8kM",
+        "id": "0vvXsWCC9xrXsKd4FyS8kM",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c8bc80c95b9d248cf462c0bd1",
+                "width": null
+            }
+        ],
+        "name": "Lofi Girl - beats to relax/study to",
+        "owner": {
+            "display_name": "Lofi Girl",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/chilledcow"
+            },
+            "href": "https://api.spotify.com/v1/users/chilledcow",
+            "id": "chilledcow",
+            "type": "user",
+            "uri": "spotify:user:chilledcow"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAm5m6VpHN39i1qfwZftx9SRjfvMAgf",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/0vvXsWCC9xrXsKd4FyS8kM/tracks",
+            "total": 500
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0vvXsWCC9xrXsKd4FyS8kM"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/42KPswOeCsr8r8G6CFgWgc"
+        },
+        "href": "https://api.spotify.com/v1/playlists/42KPswOeCsr8r8G6CFgWgc",
+        "id": "42KPswOeCsr8r8G6CFgWgc",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84419db73e1dd584a67dee033c",
+                "width": null
+            }
+        ],
+        "name": "When the homies not around",
+        "owner": {
+            "display_name": "Phillip Staunstrup",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11144239525"
+            },
+            "href": "https://api.spotify.com/v1/users/11144239525",
+            "id": "11144239525",
+            "type": "user",
+            "uri": "spotify:user:11144239525"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAgvqVS6OX0y8oDSLwX9nY77YlstJ1",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/42KPswOeCsr8r8G6CFgWgc/tracks",
+            "total": 106
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:42KPswOeCsr8r8G6CFgWgc"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/0AaX6NWJI6GliG608cOJuB"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0AaX6NWJI6GliG608cOJuB",
+        "id": "0AaX6NWJI6GliG608cOJuB",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e025d5e3052c47ff5a3e261195cab67616d00001e026eb7068a4ac341afb3565dfbab67616d00001e0273304ce0653c7758dd94b259ab67616d00001e02a1e8b73748ee972a4c22be16",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e025d5e3052c47ff5a3e261195cab67616d00001e026eb7068a4ac341afb3565dfbab67616d00001e0273304ce0653c7758dd94b259ab67616d00001e02a1e8b73748ee972a4c22be16",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e025d5e3052c47ff5a3e261195cab67616d00001e026eb7068a4ac341afb3565dfbab67616d00001e0273304ce0653c7758dd94b259ab67616d00001e02a1e8b73748ee972a4c22be16",
+                "width": 60
+            }
+        ],
+        "name": "Big Michael – Stormzy",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAF82+6BULAPrOeGXS1FIMqztss5d8",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/0AaX6NWJI6GliG608cOJuB/tracks",
+            "total": 22
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0AaX6NWJI6GliG608cOJuB"
+    },
+    null,
+    null,
+    {
+        "collaborative": false,
+        "description": "From Zero The New Album Available Now",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/0K2lMJpZQGa9TSUiQalafs"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0K2lMJpZQGa9TSUiQalafs",
+        "id": "0K2lMJpZQGa9TSUiQalafs",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847b4d7fba162ba356e432a578",
+                "width": null
+            }
+        ],
+        "name": "Linkin Park Complete Playlist",
+        "owner": {
+            "display_name": "Linkin Park",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/linkin_park_official"
+            },
+            "href": "https://api.spotify.com/v1/users/linkin_park_official",
+            "id": "linkin_park_official",
+            "type": "user",
+            "uri": "spotify:user:linkin_park_official"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAACRbG60FPhDLb44dJPw/h6wM34L5Un",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/0K2lMJpZQGa9TSUiQalafs/tracks",
+            "total": 423
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0K2lMJpZQGa9TSUiQalafs"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/2ciCubxhBxwFA9gZM4uVV5"
+        },
+        "href": "https://api.spotify.com/v1/playlists/2ciCubxhBxwFA9gZM4uVV5",
+        "id": "2ciCubxhBxwFA9gZM4uVV5",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02a1e8b73748ee972a4c22be16",
+                "width": null
+            }
+        ],
+        "name": "Stormzy – Heavy Is the Head",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAk9d7HRHypCPACJWP0i+mOqKlMc8",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/2ciCubxhBxwFA9gZM4uVV5/tracks",
+            "total": 16
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2ciCubxhBxwFA9gZM4uVV5"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/0EOsAy9cQSFUeYTt3AQdU4"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0EOsAy9cQSFUeYTt3AQdU4",
+        "id": "0EOsAy9cQSFUeYTt3AQdU4",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e028dde946f49262d84bbea6f43",
+                "width": null
+            }
+        ],
+        "name": "Josh A – Disgrace",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAgrnol1+yusbYLXNbWr8wtM6JwAt",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/0EOsAy9cQSFUeYTt3AQdU4/tracks",
+            "total": 13
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0EOsAy9cQSFUeYTt3AQdU4"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/2vkk7cV86f4qiE952DrF8u"
+        },
+        "href": "https://api.spotify.com/v1/playlists/2vkk7cV86f4qiE952DrF8u",
+        "id": "2vkk7cV86f4qiE952DrF8u",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e029478c87599550dd73bfa7e02",
+                "width": null
+            }
+        ],
+        "name": "Post Malone – Hollywood's Bleeding",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAilLqoazzV6sVNFTzvUuirwOPz0W",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/2vkk7cV86f4qiE952DrF8u/tracks",
+            "total": 17
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2vkk7cV86f4qiE952DrF8u"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/1MBZlq9lX30EcAXw8Q1ADB"
+        },
+        "href": "https://api.spotify.com/v1/playlists/1MBZlq9lX30EcAXw8Q1ADB",
+        "id": "1MBZlq9lX30EcAXw8Q1ADB",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0213b3e37318a0c247b550bccdab67616d00001e0273304ce0653c7758dd94b259ab67616d00001e02ba5db46f4b838ef6027e6f96ab67616d00001e02e6d489d359c546fea254f440",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0213b3e37318a0c247b550bccdab67616d00001e0273304ce0653c7758dd94b259ab67616d00001e02ba5db46f4b838ef6027e6f96ab67616d00001e02e6d489d359c546fea254f440",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0213b3e37318a0c247b550bccdab67616d00001e0273304ce0653c7758dd94b259ab67616d00001e02ba5db46f4b838ef6027e6f96ab67616d00001e02e6d489d359c546fea254f440",
+                "width": 60
+            }
+        ],
+        "name": "The A Team – Ed Sheeran",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAKCdBLOl/SgYU8P3TEt6+4irbE8B3",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/1MBZlq9lX30EcAXw8Q1ADB/tracks",
+            "total": 21
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1MBZlq9lX30EcAXw8Q1ADB"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/3TH8hz6O1zBvPr6gsI0GBp"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3TH8hz6O1zBvPr6gsI0GBp",
+        "id": "3TH8hz6O1zBvPr6gsI0GBp",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e0273304ce0653c7758dd94b259",
+                "width": null
+            }
+        ],
+        "name": "My playlist #22",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAt7YRPvPSkZH2EXPFBxPlVHC9FOs",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/3TH8hz6O1zBvPr6gsI0GBp/tracks",
+            "total": 15
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3TH8hz6O1zBvPr6gsI0GBp"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/5xF1LKgcK7mV2iMh2mBbMZ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/5xF1LKgcK7mV2iMh2mBbMZ",
+        "id": "5xF1LKgcK7mV2iMh2mBbMZ",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02557e42aa2929017ed5537373",
+                "width": null
+            }
+        ],
+        "name": "Josh A – Save Our Souls",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAApWcFUo76fwQi3tYqQE34al/CEcK",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/5xF1LKgcK7mV2iMh2mBbMZ/tracks",
+            "total": 9
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5xF1LKgcK7mV2iMh2mBbMZ"
+    },
+    {
+        "collaborative": false,
+        "description": "Stream all of Ed Sheeran’s greatest hits in one playlist. Follow <a href=\"https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V\">Ed Sheeran's</a> profile.",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/0uFhZpiffd4h8fcBgw42i1"
+        },
+        "href": "https://api.spotify.com/v1/playlists/0uFhZpiffd4h8fcBgw42i1",
+        "id": "0uFhZpiffd4h8fcBgw42i1",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84ebe2486d2b7f148459e0ed98",
+                "width": null
+            }
+        ],
+        "name": "Ed Sheeran: The Complete Collection",
+        "owner": {
+            "display_name": "Ed Sheeran",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/edsheeran"
+            },
+            "href": "https://api.spotify.com/v1/users/edsheeran",
+            "id": "edsheeran",
+            "type": "user",
+            "uri": "spotify:user:edsheeran"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAACE6RFn461DN4Em3awFE3jXb8+RHj7",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/0uFhZpiffd4h8fcBgw42i1/tracks",
+            "total": 145
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:0uFhZpiffd4h8fcBgw42i1"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/4J4tz02E4cQR0J5M9x8D9i"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4J4tz02E4cQR0J5M9x8D9i",
+        "id": "4J4tz02E4cQR0J5M9x8D9i",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e0255404f712deb84d0650a4b41",
+                "width": null
+            }
+        ],
+        "name": "Post Malone – Stoney (Deluxe)",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAn+XacVb0jiF/CBbbWJY3pDDhQe5",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/4J4tz02E4cQR0J5M9x8D9i/tracks",
+            "total": 18
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4J4tz02E4cQR0J5M9x8D9i"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/24zNOlTdMWuSKFlZQLjhRw"
+        },
+        "href": "https://api.spotify.com/v1/playlists/24zNOlTdMWuSKFlZQLjhRw",
+        "id": "24zNOlTdMWuSKFlZQLjhRw",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02b1c4b76e23414c9f20242268",
+                "width": null
+            }
+        ],
+        "name": "Post Malone – beerbongs & bentleys",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAkSXiv0dWMM79CXCUWWIMv68yEK/",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/24zNOlTdMWuSKFlZQLjhRw/tracks",
+            "total": 18
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:24zNOlTdMWuSKFlZQLjhRw"
+    },
+    {
+        "collaborative": false,
+        "description": "Pump it up",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/6xVjCpnQXhNFeb4rxPfpJX"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6xVjCpnQXhNFeb4rxPfpJX",
+        "id": "6xVjCpnQXhNFeb4rxPfpJX",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e020540e8acdb2c6cc9c0c7dcd9ab67616d00001e022681f74b3fb3ba803bcc0577ab67616d00001e023614e26f0db450a2ed55a4caab67616d00001e02ce9ffe310aa206be81d03bb6",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e020540e8acdb2c6cc9c0c7dcd9ab67616d00001e022681f74b3fb3ba803bcc0577ab67616d00001e023614e26f0db450a2ed55a4caab67616d00001e02ce9ffe310aa206be81d03bb6",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e020540e8acdb2c6cc9c0c7dcd9ab67616d00001e022681f74b3fb3ba803bcc0577ab67616d00001e023614e26f0db450a2ed55a4caab67616d00001e02ce9ffe310aa206be81d03bb6",
+                "width": 60
+            }
+        ],
+        "name": "Naowh ft. later",
+        "owner": {
+            "display_name": "Robin Gabay",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/naowh"
+            },
+            "href": "https://api.spotify.com/v1/users/naowh",
+            "id": "naowh",
+            "type": "user",
+            "uri": "spotify:user:naowh"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAADKiqg/fhpz0Ns97Oc8xiJi9RfK/ku",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/6xVjCpnQXhNFeb4rxPfpJX/tracks",
+            "total": 1586
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6xVjCpnQXhNFeb4rxPfpJX"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/6lzfaZOZYkWOzIVfheNqR2"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6lzfaZOZYkWOzIVfheNqR2",
+        "id": "6lzfaZOZYkWOzIVfheNqR2",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02d266be64b095db17c5b6814a",
+                "width": null
+            }
+        ],
+        "name": "My playlist #22",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAvQ+FN+R4ghLZbGqQcEsv5qYrCNF",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/6lzfaZOZYkWOzIVfheNqR2/tracks",
+            "total": 10
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6lzfaZOZYkWOzIVfheNqR2"
+    },
+    null,
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/5iQk73OJfd4NvZ4kzp2JKE"
+        },
+        "href": "https://api.spotify.com/v1/playlists/5iQk73OJfd4NvZ4kzp2JKE",
+        "id": "5iQk73OJfd4NvZ4kzp2JKE",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e029cf263e69af0ec393f132838",
+                "width": null
+            }
+        ],
+        "name": "NF – NF",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA+dRYhQNPJ/t54hx5o49azuXhaNN",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/5iQk73OJfd4NvZ4kzp2JKE/tracks",
+            "total": 6
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5iQk73OJfd4NvZ4kzp2JKE"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/1j5MJxqT33UWxxJxUQXAEd"
+        },
+        "href": "https://api.spotify.com/v1/playlists/1j5MJxqT33UWxxJxUQXAEd",
+        "id": "1j5MJxqT33UWxxJxUQXAEd",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e0295d5d85909d5deb5cee9f311",
+                "width": null
+            }
+        ],
+        "name": "NF – Mansion",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA86Pk+VDTC5LiTRuTJJWthx5pqwl",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/1j5MJxqT33UWxxJxUQXAEd/tracks",
+            "total": 12
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1j5MJxqT33UWxxJxUQXAEd"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/4zpggdLV6fO7rcKukyDtRe"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4zpggdLV6fO7rcKukyDtRe",
+        "id": "4zpggdLV6fO7rcKukyDtRe",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e0214c95b3975386061f46f3983",
+                "width": null
+            }
+        ],
+        "name": "NF – Therapy Session",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAABOEdZp96MotVtWYoLXNTrZ8IH04E",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/4zpggdLV6fO7rcKukyDtRe/tracks",
+            "total": 15
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4zpggdLV6fO7rcKukyDtRe"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/1Gs4Yjo8PmVvZxRCPRbRAu"
+        },
+        "href": "https://api.spotify.com/v1/playlists/1Gs4Yjo8PmVvZxRCPRbRAu",
+        "id": "1Gs4Yjo8PmVvZxRCPRbRAu",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02cd733919ee57d0cc466e152f",
+                "width": null
+            }
+        ],
+        "name": "NF – Perception",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA7gTSd/RxToHltxw+Juare19G+y9",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/1Gs4Yjo8PmVvZxRCPRbRAu/tracks",
+            "total": 16
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1Gs4Yjo8PmVvZxRCPRbRAu"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/6zyT7PuaPVOcTqrgq1sV3h"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6zyT7PuaPVOcTqrgq1sV3h",
+        "id": "6zyT7PuaPVOcTqrgq1sV3h",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0218b8088fe0c3dbf78398b55aab67616d00001e0218e1508eff5a90c2f8c233cbab67616d00001e0274bc58753145f6374371dbe6ab67616d00001e0298e374702fe953e416c2147b",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0218b8088fe0c3dbf78398b55aab67616d00001e0218e1508eff5a90c2f8c233cbab67616d00001e0274bc58753145f6374371dbe6ab67616d00001e0298e374702fe953e416c2147b",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0218b8088fe0c3dbf78398b55aab67616d00001e0218e1508eff5a90c2f8c233cbab67616d00001e0274bc58753145f6374371dbe6ab67616d00001e0298e374702fe953e416c2147b",
+                "width": 60
+            }
+        ],
+        "name": "New Playlist 3",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAS98tVKT0ENmEqgW7dElDwt0Wm68J",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/6zyT7PuaPVOcTqrgq1sV3h/tracks",
+            "total": 267
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6zyT7PuaPVOcTqrgq1sV3h"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/2s1Z9jKuN4X2gath4MXodA"
+        },
+        "href": "https://api.spotify.com/v1/playlists/2s1Z9jKuN4X2gath4MXodA",
+        "id": "2s1Z9jKuN4X2gath4MXodA",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e024edb1e08db001bbdc8ff7e5f",
+                "width": null
+            }
+        ],
+        "name": "My playlist #16",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA0LxjAwlmUmVF/zzB2oW2O9T+sjy",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/2s1Z9jKuN4X2gath4MXodA/tracks",
+            "total": 16
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2s1Z9jKuN4X2gath4MXodA"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/6dnWFfyE2H0zrTXUnzkLr7"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6dnWFfyE2H0zrTXUnzkLr7",
+        "id": "6dnWFfyE2H0zrTXUnzkLr7",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e029feadc48ab0661e9b3a9170b",
+                "width": null
+            }
+        ],
+        "name": "A$AP Rocky – TESTING",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA2jGLBUWB0z/7HFlzOoAJtl82PbQ",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/6dnWFfyE2H0zrTXUnzkLr7/tracks",
+            "total": 15
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6dnWFfyE2H0zrTXUnzkLr7"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/1T0IzvZhTxfDPGCOMw8e6I"
+        },
+        "href": "https://api.spotify.com/v1/playlists/1T0IzvZhTxfDPGCOMw8e6I",
+        "id": "1T0IzvZhTxfDPGCOMw8e6I",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02e19b1b51cdd35051e17cf6dc",
+                "width": null
+            }
+        ],
+        "name": "Logic – Bobby Tarantino II",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA8K6wseTt4etImFYym9fID0CdoBp",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/1T0IzvZhTxfDPGCOMw8e6I/tracks",
+            "total": 13
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:1T0IzvZhTxfDPGCOMw8e6I"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/7CRApifRUtpW80mcTVR1Qo"
+        },
+        "href": "https://api.spotify.com/v1/playlists/7CRApifRUtpW80mcTVR1Qo",
+        "id": "7CRApifRUtpW80mcTVR1Qo",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e022051ebd22d00d6a71ac4de7cab67616d00001e02777212e2aaf1ea9d40530380ab67616d00001e02d712efd30fa531f6369bcc60ab67616d00001e02f5e26f12932a2bcf4935be73",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e022051ebd22d00d6a71ac4de7cab67616d00001e02777212e2aaf1ea9d40530380ab67616d00001e02d712efd30fa531f6369bcc60ab67616d00001e02f5e26f12932a2bcf4935be73",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e022051ebd22d00d6a71ac4de7cab67616d00001e02777212e2aaf1ea9d40530380ab67616d00001e02d712efd30fa531f6369bcc60ab67616d00001e02f5e26f12932a2bcf4935be73",
+                "width": 60
+            }
+        ],
+        "name": "New Playlist 2",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA9jRWxZ9UG5BZZQnLOOTgmhT/73C",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/7CRApifRUtpW80mcTVR1Qo/tracks",
+            "total": 194
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7CRApifRUtpW80mcTVR1Qo"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/5EyRkx2d4UlnPrEECj56Pw"
+        },
+        "href": "https://api.spotify.com/v1/playlists/5EyRkx2d4UlnPrEECj56Pw",
+        "id": "5EyRkx2d4UlnPrEECj56Pw",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e029a2e68ff9d7f9f91f7f0b69a",
+                "width": null
+            }
+        ],
+        "name": "Nephew – Vinter – i – Ring",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA9aYszIKnb8gwMf+hxXYnldvrES/",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/5EyRkx2d4UlnPrEECj56Pw/tracks",
+            "total": 3
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5EyRkx2d4UlnPrEECj56Pw"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/3m3CLVOAO2pRr7u6tc0A67"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3m3CLVOAO2pRr7u6tc0A67",
+        "id": "3m3CLVOAO2pRr7u6tc0A67",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e022ae92030b51fb8135d694af9ab67616d00001e028596df2f2646ab9aba464c30ab67616d00001e029fa2954cdefd83d439a1e7acab67616d00001e02b5725b1ec9b1f94aaa75c264",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e022ae92030b51fb8135d694af9ab67616d00001e028596df2f2646ab9aba464c30ab67616d00001e029fa2954cdefd83d439a1e7acab67616d00001e02b5725b1ec9b1f94aaa75c264",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e022ae92030b51fb8135d694af9ab67616d00001e028596df2f2646ab9aba464c30ab67616d00001e029fa2954cdefd83d439a1e7acab67616d00001e02b5725b1ec9b1f94aaa75c264",
+                "width": 60
+            }
+        ],
+        "name": "Gym",
+        "owner": {
+            "display_name": "Rasmus Arndal",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/1112762540"
+            },
+            "href": "https://api.spotify.com/v1/users/1112762540",
+            "id": "1112762540",
+            "type": "user",
+            "uri": "spotify:user:1112762540"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAkOoniFWCfayONme4Y46MEb197H/w",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/3m3CLVOAO2pRr7u6tc0A67/tracks",
+            "total": 118
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3m3CLVOAO2pRr7u6tc0A67"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/3JArj240iHYTaO9MyJgKJl"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3JArj240iHYTaO9MyJgKJl",
+        "id": "3JArj240iHYTaO9MyJgKJl",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02dee6b58d35215322626b5701",
+                "width": null
+            }
+        ],
+        "name": "Eminem – Revival",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAx7KM+Iw8Qud6OAdQENjXHc1jJGt",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/3JArj240iHYTaO9MyJgKJl/tracks",
+            "total": 19
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3JArj240iHYTaO9MyJgKJl"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/01fZWwKCBX3vmFUf0OBWTh"
+        },
+        "href": "https://api.spotify.com/v1/playlists/01fZWwKCBX3vmFUf0OBWTh",
+        "id": "01fZWwKCBX3vmFUf0OBWTh",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e020c13d3d5a503c84fcc60ae94ab67616d00001e023c9047f9aa5d0d1e03827039ab67616d00001e0271340c55289f59acb3ecd40fab67616d00001e02f48a2a4e66094853072c3b79",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e020c13d3d5a503c84fcc60ae94ab67616d00001e023c9047f9aa5d0d1e03827039ab67616d00001e0271340c55289f59acb3ecd40fab67616d00001e02f48a2a4e66094853072c3b79",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e020c13d3d5a503c84fcc60ae94ab67616d00001e023c9047f9aa5d0d1e03827039ab67616d00001e0271340c55289f59acb3ecd40fab67616d00001e02f48a2a4e66094853072c3b79",
+                "width": 60
+            }
+        ],
+        "name": "Liked from Radio",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAC+c4n2ZP3PamlUuwKRRrs7+2r/h/",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/01fZWwKCBX3vmFUf0OBWTh/tracks",
+            "total": 9
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:01fZWwKCBX3vmFUf0OBWTh"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/4uS67fTwHlD0EaFSzKa2ve"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4uS67fTwHlD0EaFSzKa2ve",
+        "id": "4uS67fTwHlD0EaFSzKa2ve",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e025a68d024d71cba0508ac3664ab67616d00001e0264f8a309aa3c0a66a31fc374ab67616d00001e028c77bcf5f5a227d270d23370ab67616d00001e02de034bbdbe12c86285356121",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e025a68d024d71cba0508ac3664ab67616d00001e0264f8a309aa3c0a66a31fc374ab67616d00001e028c77bcf5f5a227d270d23370ab67616d00001e02de034bbdbe12c86285356121",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e025a68d024d71cba0508ac3664ab67616d00001e0264f8a309aa3c0a66a31fc374ab67616d00001e028c77bcf5f5a227d270d23370ab67616d00001e02de034bbdbe12c86285356121",
+                "width": 60
+            }
+        ],
+        "name": "WIEE",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAABjhI8VPARqNv8o7GpDxjTrz4L6JQJ",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/4uS67fTwHlD0EaFSzKa2ve/tracks",
+            "total": 190
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4uS67fTwHlD0EaFSzKa2ve"
+    },
+    null,
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/7yn6aZcXY5KXFCK1RPt27q"
+        },
+        "href": "https://api.spotify.com/v1/playlists/7yn6aZcXY5KXFCK1RPt27q",
+        "id": "7yn6aZcXY5KXFCK1RPt27q",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02a26cc58b4d64c2ece3376389",
+                "width": null
+            }
+        ],
+        "name": "Avicii – AVĪCI (01)",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA+47AMkI1VhChvQvM0u1ywEzhRx8",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/7yn6aZcXY5KXFCK1RPt27q/tracks",
+            "total": 6
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7yn6aZcXY5KXFCK1RPt27q"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/3Tkg3lsyJGLTHLnlprTmdF"
+        },
+        "href": "https://api.spotify.com/v1/playlists/3Tkg3lsyJGLTHLnlprTmdF",
+        "id": "3Tkg3lsyJGLTHLnlprTmdF",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02145e1cf12538f5666511237d",
+                "width": null
+            }
+        ],
+        "name": "Linkin Park – One More Light",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA4IXtU79Lebhj+ymsE+CFu44W2Tk",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/3Tkg3lsyJGLTHLnlprTmdF/tracks",
+            "total": 10
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:3Tkg3lsyJGLTHLnlprTmdF"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/2wn2rvSVIZWXZ2coAW2UQs"
+        },
+        "href": "https://api.spotify.com/v1/playlists/2wn2rvSVIZWXZ2coAW2UQs",
+        "id": "2wn2rvSVIZWXZ2coAW2UQs",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e02015c484a7aca592df1a77828ab67616d00001e028c56267153920f9c0df36c5bab67616d00001e02b9df7275ff80a60fa1272835ab67616d00001e02d8bf32c416e661dd813345b1",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e02015c484a7aca592df1a77828ab67616d00001e028c56267153920f9c0df36c5bab67616d00001e02b9df7275ff80a60fa1272835ab67616d00001e02d8bf32c416e661dd813345b1",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e02015c484a7aca592df1a77828ab67616d00001e028c56267153920f9c0df36c5bab67616d00001e02b9df7275ff80a60fa1272835ab67616d00001e02d8bf32c416e661dd813345b1",
+                "width": 60
+            }
+        ],
+        "name": "Rødvinslisten",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAXEY+zfiqDM7vhoNp07NqOwKi3lTB",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/2wn2rvSVIZWXZ2coAW2UQs/tracks",
+            "total": 72
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:2wn2rvSVIZWXZ2coAW2UQs"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/4GqT38sboPJi7ecgsaag7d"
+        },
+        "href": "https://api.spotify.com/v1/playlists/4GqT38sboPJi7ecgsaag7d",
+        "id": "4GqT38sboPJi7ecgsaag7d",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02e2f039481babe23658fc719a",
+                "width": null
+            }
+        ],
+        "name": "Linkin Park — Hybrid Theory (Bonus Track Version)",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAAwE9QWDQNOGM1kJ1weMf1OeaSt/f",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/4GqT38sboPJi7ecgsaag7d/tracks",
+            "total": 15
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:4GqT38sboPJi7ecgsaag7d"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/64aYhV6S3S0k3oYbTEiuTx"
+        },
+        "href": "https://api.spotify.com/v1/playlists/64aYhV6S3S0k3oYbTEiuTx",
+        "id": "64aYhV6S3S0k3oYbTEiuTx",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e028b5b6fa1326d996181e71dd7",
+                "width": null
+            }
+        ],
+        "name": "Linkin Park — Meteora (Bonus Track Version)",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA1ZO2o3jOUtqixUH9OhVCPBHO/9K",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/64aYhV6S3S0k3oYbTEiuTx/tracks",
+            "total": 16
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:64aYhV6S3S0k3oYbTEiuTx"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/65nfY9KSmr8cKOfszHbKqZ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/65nfY9KSmr8cKOfszHbKqZ",
+        "id": "65nfY9KSmr8cKOfszHbKqZ",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e026e996745f2c7b8036abef213",
+                "width": null
+            }
+        ],
+        "name": "Linkin Park — Minutes To Midnight (Explicit Version)",
+        "owner": {
+            "display_name": "Mathias Helsengren",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/mrhutmat"
+            },
+            "href": "https://api.spotify.com/v1/users/mrhutmat",
+            "id": "mrhutmat",
+            "type": "user",
+            "uri": "spotify:user:mrhutmat"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAA+zPyKvyECmXWK0aoxbJ+5gPxp2+",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/65nfY9KSmr8cKOfszHbKqZ/tracks",
+            "total": 12
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:65nfY9KSmr8cKOfszHbKqZ"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/75ESHWmiPV6qKXEZkRwsvg"
+        },
+        "href": "https://api.spotify.com/v1/playlists/75ESHWmiPV6qKXEZkRwsvg",
+        "id": "75ESHWmiPV6qKXEZkRwsvg",
+        "images": [
+            {
+                "height": null,
+                "url": "https://i.scdn.co/image/ab67616d00001e02d8bf32c416e661dd813345b1",
+                "width": null
+            }
+        ],
+        "name": "Drengene Fra Angora – Drengene fra Angora",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAABm9jyvFdi9d30rHd0UchmjcbAFs0",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/75ESHWmiPV6qKXEZkRwsvg/tracks",
+            "total": 16
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:75ESHWmiPV6qKXEZkRwsvg"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/7fGXt2ODnv0JcWCxbNROeB"
+        },
+        "href": "https://api.spotify.com/v1/playlists/7fGXt2ODnv0JcWCxbNROeB",
+        "id": "7fGXt2ODnv0JcWCxbNROeB",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0220a88f3646b6a9826efb1974ab67616d00001e029d70d746266f678b2885d58aab67616d00001e02d067828a6bcc3c1c9fa5f43fab67616d00001e02df3aa3f27dfda3285ca7a2e5",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0220a88f3646b6a9826efb1974ab67616d00001e029d70d746266f678b2885d58aab67616d00001e02d067828a6bcc3c1c9fa5f43fab67616d00001e02df3aa3f27dfda3285ca7a2e5",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0220a88f3646b6a9826efb1974ab67616d00001e029d70d746266f678b2885d58aab67616d00001e02d067828a6bcc3c1c9fa5f43fab67616d00001e02df3aa3f27dfda3285ca7a2e5",
+                "width": 60
+            }
+        ],
+        "name": "instant sleep",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAA0jbpUhZGuLCTFIcdyLLrPCAB4FmB",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/7fGXt2ODnv0JcWCxbNROeB/tracks",
+            "total": 111
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7fGXt2ODnv0JcWCxbNROeB"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/6abiiinZo8FEoPVbQeT11N"
+        },
+        "href": "https://api.spotify.com/v1/playlists/6abiiinZo8FEoPVbQeT11N",
+        "id": "6abiiinZo8FEoPVbQeT11N",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e020fe62e9afb4ae8f52a241d33ab67616d00001e0221703c471960a82a147a6f82ab67616d00001e02efeb247a273b24cb49939a0bab67616d00001e02f550279ca0c3c2fd02f90cae",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e020fe62e9afb4ae8f52a241d33ab67616d00001e0221703c471960a82a147a6f82ab67616d00001e02efeb247a273b24cb49939a0bab67616d00001e02f550279ca0c3c2fd02f90cae",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e020fe62e9afb4ae8f52a241d33ab67616d00001e0221703c471960a82a147a6f82ab67616d00001e02efeb247a273b24cb49939a0bab67616d00001e02f550279ca0c3c2fd02f90cae",
+                "width": 60
+            }
+        ],
+        "name": "Known melodies",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAEm08r8TjZrNfG11Sx+KV08GA5Q8H",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/6abiiinZo8FEoPVbQeT11N/tracks",
+            "total": 15
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:6abiiinZo8FEoPVbQeT11N"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/5FpNdI8fDzJIpwQ2JuZ5vL"
+        },
+        "href": "https://api.spotify.com/v1/playlists/5FpNdI8fDzJIpwQ2JuZ5vL",
+        "id": "5FpNdI8fDzJIpwQ2JuZ5vL",
+        "images": [
+            {
+                "height": null,
+                "url": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84ff94ef2539ec862e39821bc8",
+                "width": null
+            }
+        ],
+        "name": "De gyldne toner",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAKdzpWS1CcpatWVj21zHJtCo8O0jD3",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/5FpNdI8fDzJIpwQ2JuZ5vL/tracks",
+            "total": 1309
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5FpNdI8fDzJIpwQ2JuZ5vL"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/7io28ukwLWnx3154rO7Lzf"
+        },
+        "href": "https://api.spotify.com/v1/playlists/7io28ukwLWnx3154rO7Lzf",
+        "id": "7io28ukwLWnx3154rO7Lzf",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e024eeefa0555b6f8cc88df9ffeab67616d00001e02aa8cec6b521c065cc8344f78ab67616d00001e02b7bea3d01f04e6d0408d2afeab67616d00001e02de0cd11d7b31c3bd1fd5983d",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e024eeefa0555b6f8cc88df9ffeab67616d00001e02aa8cec6b521c065cc8344f78ab67616d00001e02b7bea3d01f04e6d0408d2afeab67616d00001e02de0cd11d7b31c3bd1fd5983d",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e024eeefa0555b6f8cc88df9ffeab67616d00001e02aa8cec6b521c065cc8344f78ab67616d00001e02b7bea3d01f04e6d0408d2afeab67616d00001e02de0cd11d7b31c3bd1fd5983d",
+                "width": 60
+            }
+        ],
+        "name": "ZzZzZz",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAABXWInMCCEmdWjRu15Is5gNdXIAw8Y",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/7io28ukwLWnx3154rO7Lzf/tracks",
+            "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:7io28ukwLWnx3154rO7Lzf"
+    },
+    {
+        "collaborative": false,
+        "description": "",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/playlist/5cqVxXD5FpnqIYNiheWFAI"
+        },
+        "href": "https://api.spotify.com/v1/playlists/5cqVxXD5FpnqIYNiheWFAI",
+        "id": "5cqVxXD5FpnqIYNiheWFAI",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e0210dfc5830b62c3bc5c0a580fab67616d00001e0270452bf6a0ce890c43665bc9ab67616d00001e02980589b09c55f79a4f90e227ab67616d00001e029c72b249fcaa04d074c1dfcd",
+                "width": 640
+            },
+            {
+                "height": 300,
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e0210dfc5830b62c3bc5c0a580fab67616d00001e0270452bf6a0ce890c43665bc9ab67616d00001e02980589b09c55f79a4f90e227ab67616d00001e029c72b249fcaa04d074c1dfcd",
+                "width": 300
+            },
+            {
+                "height": 60,
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e0210dfc5830b62c3bc5c0a580fab67616d00001e0270452bf6a0ce890c43665bc9ab67616d00001e02980589b09c55f79a4f90e227ab67616d00001e029c72b249fcaa04d074c1dfcd",
+                "width": 60
+            }
+        ],
+        "name": "best of The Cure",
+        "owner": {
+            "display_name": "Lukas H.K",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/user/11122572879"
+            },
+            "href": "https://api.spotify.com/v1/users/11122572879",
+            "id": "11122572879",
+            "type": "user",
+            "uri": "spotify:user:11122572879"
+        },
+        "primary_color": null,
+        "public": true,
+        "snapshot_id": "AAAAQVzyv/U8VpRyjflcGCluWmLhIGUX",
+        "tracks": {
+            "href": "https://api.spotify.com/v1/playlists/5cqVxXD5FpnqIYNiheWFAI/tracks",
+            "total": 66
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:5cqVxXD5FpnqIYNiheWFAI"
+    }
+]

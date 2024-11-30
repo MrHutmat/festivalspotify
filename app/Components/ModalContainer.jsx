@@ -27,14 +27,13 @@
 //   );
 // };
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ModalForAllSongs from "./Modals/ModalForAllSongs";
 import ModalForPlaylistSelector from "./Modals/ModalForPlaylistSelector";
 
 const ModalContainer = () => {
   const [selectedOption, setSelectedOption] = useState(""); // Dropdown selection
-  const [isModalOpen, setIsModalOpen] = useState(false); // Modal visibility
-
+  const modalRef = useRef(null);
   const getModalContent = () => {
     if (selectedOption === "Liked Songs") return <ModalForAllSongs />;
     if (selectedOption === "Playlist") return <ModalForPlaylistSelector />;
@@ -43,16 +42,18 @@ const ModalContainer = () => {
 
   const openModal = () => {
     if (selectedOption) {
-      setIsModalOpen(true);
+      modalRef.current?.showModal(); // Open the modal
     } else {
       alert("Please select an option first!");
     }
   };
 
-  const closeModal = () => setIsModalOpen(false);
+  const closeModal = () => {
+    modalRef.current?.close(); // Close the modal
+  };
 
   return (
-    <div>
+    <div className="">
       <div className="mb-6">
         <label htmlFor="source" className="block text-lg mb-2">
           Select a source:
@@ -77,12 +78,26 @@ const ModalContainer = () => {
         Find Festival Matches
       </button>
 
+      <dialog ref={modalRef} className="modal modal-bottom sm:modal-middle ">
+        <div className="modal-box max-h-[450px]">
+          <button
+            className="text-gray-400 hover:text-gray-300 text-2xl absolute top-4 right-4 focus:outline-none"
+            onClick={closeModal}
+          >
+            &times;
+          </button>
+          <div className="max-h-[65vh]">
+            {getModalContent()}
+          </div>
+        </div>
+      </dialog>
+
       {/* Modal */}
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50">
           <div
-            className="w-[600px] max-w-full max-h-[80vh] bg-gray-800 rounded-lg shadow-lg p-6 
-                      relative sm:w-[90%] overflow-hidden"
+            className="min-w-fit min-h-fit bg-gray-800 rounded-lg shadow-lg p-6 
+                      relative overflow-hidden"
           >
             <button
               className="text-gray-400 hover:text-gray-300 text-2xl absolute top-4 right-4 focus:outline-none"
@@ -95,7 +110,7 @@ const ModalContainer = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

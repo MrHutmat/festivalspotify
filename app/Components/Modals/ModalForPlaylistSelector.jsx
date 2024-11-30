@@ -26,6 +26,34 @@ const ModalForPlaylistSelector = () => {
   const [hover, setHover] = useState(false);
 
   // Maybe move this logic.
+
+  //TODO: Wait and see if Spotify will fix the issue with their playlists showing up in the json as null.
+  // useEffect(() => {
+  //   const showAllPlaylists = async (session) => {
+  //     let nextUrl = "https://api.spotify.com/v1/me/playlists?limit=50&offset=0"; // Replace with your initial URL
+  //     let allPlaylists = [];
+
+  //     // Continue fetching tracks until there are no more
+  //     while (nextUrl) {
+  //       // Fetch tracks data
+  //       const response = await fetch(nextUrl, {
+  //         headers: {
+  //           Authorization: `Bearer ${session.accessToken}`,
+  //         },
+  //       });
+  //       const data = await response.json(); // Assuming the response is JSON
+
+  //       allPlaylists.push(...data.items);
+
+  //       // Update nextUrl for pagination
+  //       nextUrl = data.next;
+  //     }
+  //     setPlaylists(allPlaylists);
+  //     setLoading(false);
+  //   };
+  //   showAllPlaylists(session);
+  // }, []);
+
   useEffect(() => {
     const showAllPlaylists = async (session) => {
       let nextUrl = "https://api.spotify.com/v1/me/playlists?limit=50&offset=0"; // Replace with your initial URL
@@ -46,7 +74,9 @@ const ModalForPlaylistSelector = () => {
         // Update nextUrl for pagination
         nextUrl = data.next;
       }
-      setPlaylists(allPlaylists);
+      const filteredPlaylists = allPlaylists.filter((item) => item !== null);
+
+      setPlaylists(filteredPlaylists);
       setLoading(false);
     };
     showAllPlaylists(session);
@@ -135,9 +165,6 @@ const ModalForPlaylistSelector = () => {
       }
     }
   };
-  console.log("playlists", playlists);
-  console.log("selectedPlaylist", playlists.id);
-
   return (
     <div className="max-h-[550px]">
       <div className="">
