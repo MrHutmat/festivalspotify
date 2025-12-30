@@ -11,10 +11,10 @@ async function refreshAccessToken(token) {
       "content-type": "application/x-www-form-urlencoded",
       Authorization:
         "Basic " +
-        new Buffer.from(
-          process.env.NEXT_PUBLIC_CLIENT_ID +
+        Buffer.from(
+          process.env.SPOTIFY_CLIENT_ID +
             ":" +
-            process.env.NEXT_PUBLIC_CLIENT_SECRET
+            process.env.SPOTIFY_CLIENT_SECRET
         ).toString("base64"),
     },
     body: params,
@@ -30,8 +30,8 @@ async function refreshAccessToken(token) {
 export const options = {
   providers: [
     SpotifyProvider({
-      clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
-      clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+      clientId: process.env.SPOTIFY_CLIENT_ID,
+      clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
       authorization: LOGIN_URL,
     }),
   ],

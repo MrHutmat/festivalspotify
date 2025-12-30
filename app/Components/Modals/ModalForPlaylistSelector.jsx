@@ -1,7 +1,7 @@
 "use client";
 
-import roskildeLineUp from "../../utils/artists_spotify_roskilde.json" assert { type: "json" };
-import tinderboxLineUp from "../../utils/artists_spotify_tinderbox.json" assert { type: "json" };
+import roskildeLineUp from "../../utils/artists_spotify_roskilde.json" with { type: "json" };
+import tinderboxLineUp from "../../utils/artists_spotify_tinderbox.json" with { type: "json" };
 import { useState, useRef, useEffect } from "react";
 import { allPlaylistSongs } from "../../utils/allPlaylistSongs";
 

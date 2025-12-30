@@ -21,7 +21,7 @@ export const Login = () => {
     <button
       onClick={() =>
         signIn("spotify", {
-          callbackUrl: process.env.NEXT_PUBLIC_SPOTIFY_CALLBACK_URL,
+          callbackUrl: process.env.NEXT_PUBLIC_CALLBACK_URL || "/findkunstner",
         })
       }
       className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-xl"
